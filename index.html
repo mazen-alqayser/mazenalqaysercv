@@ -33,24 +33,7 @@
         .cv-sidebar {
             background-color: var(--sidebar-bg);
             color: white;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 20rem;
             z-index: 10;
-        }
-
-        @media (max-width: 768px) {
-            .cv-sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-            }
-
-            .cv-main {
-                margin-left: 0 !important;
-            }
         }
 
         .section-heading {
@@ -116,24 +99,26 @@
             color: transparent;
         }
 
-       .ai-border {
-    border: 4px solid transparent;
-    border-image: linear-gradient(135deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    animation: borderMove 3s linear infinite; /* هنا الحركة */
-}
+        .ai-border {
+            border: 4px solid transparent;
+            border-image: linear-gradient(135deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            animation: borderMove 3s linear infinite;
+        }
 
-@keyframes borderMove {
-    0% {
-        border-image: linear-gradient(0deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    }
-    50% {
-        border-image: linear-gradient(180deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    }
-    100% {
-        border-image: linear-gradient(360deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    }
-}
+        @keyframes borderMove {
 
+            0% {
+                border-image: linear-gradient(0deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            }
+
+            50% {
+                border-image: linear-gradient(180deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            }
+
+            100% {
+                border-image: linear-gradient(360deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            }
+        }
 
         .x-icon {
             color: #000;
@@ -244,44 +229,68 @@
         <div class="robot-head"></div>
     </div>
 
-<nav id="sideNav" class="cv-sidebar flex flex-col items-center justify-center p-8 text-center md:h-screen md:fixed md:top-0 md:left-0 md:items-center md:justify-center">
-    <div class="mb-5 md:mb-10">
-        <img class="w-40 h-40 mx-auto mb-2 ai-border object-cover" 
-             src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG" 
-             alt="Mazen Mohamed Siddig">
-        <h1 class="text-3xl font-bold text-white section-heading text-center">MAZEN MOHAMED SIDDIG</h1>
-        <p class="text-xl font-bold text-white section-heading text-center">IT Engineer and AI Developer</p>
-    </div>
-    
-    <!-- Navigation Links -->
-    <ul class="flex flex-col space-y-4 items-center justify-center text-center w-full">
-        <li><a class="nav-link text-white hover:text-gray-300" href="#about">ABOUT</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#education">EDUCATION</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#skills">SKILLS</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#certificates">CERTIFICATES</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#organizations">ORGANIZATIONS</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#projects">PROJECTS</a></li>
-    </ul>
+    <nav id="sideNav"
+        class="cv-sidebar hidden md:flex flex-col items-center justify-center p-8 text-center md:h-screen md:fixed md:top-0 md:left-0 md:items-center md:justify-center">
+        <div class="mb-5 md:mb-10">
+            <img class="w-40 h-40 mx-auto mb-2 ai-border object-cover"
+                src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG"
+                alt="Mazen Mohamed Siddig">
+            <h1 class="text-3xl font-bold text-white section-heading text-center">MAZEN MOHAMED SIDDIG</h1>
+            <p class="text-xl font-bold text-white section-heading text-center">IT Engineer and AI Developer</p>
+        </div>
 
-    <a href="https://raw.githubusercontent.com/mazen-alqayser/a/main/MAZEN%20ALQAYSER%20IT%20ENGINEERING%20-%20AI%20DEVELOPER.pdf"
-   class="pdf-button hidden md:block" download>PDF VERSION</a>
-</nav>
+        <ul class="flex flex-col space-y-4 items-center justify-center text-center w-full">
+            <li><a class="nav-link text-white hover:text-gray-300" href="#about">ABOUT</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#education">EDUCATION</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#skills">SKILLS</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#certificates">CERTIFICATES</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#organizations">ORGANIZATIONS</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#projects">PROJECTS</a></li>
+        </ul>
 
+        <a href="https://raw.githubusercontent.com/mazen-alqayser/a/main/MAZEN%20ALQAYSER%20IT%20ENGINEERING%20-%20AI%20DEVELOPER.pdf"
+            class="pdf-button mt-6 w-full" download>PDF VERSION</a>
+    </nav>
+
+    <header class="md:hidden bg-white shadow-md p-4 flex flex-col items-center">
+        <div class="flex items-center space-x-4 mb-4">
+            <img class="w-16 h-16 ai-border object-cover"
+                src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG"
+                alt="Mazen Mohamed Siddig">
+            <h1 class="text-2xl font-bold ai-gradient section-heading">MAZEN ALQAYSER</h1>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2 mb-4">
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#about">ABOUT</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#education">EDUCATION</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#skills">SKILLS</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#certificates">CERTIFICATES</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#organizations">ORGANIZATIONS</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#projects">PROJECTS</a>
+        </div>
+        <a href="https://raw.githubusercontent.com/mazen-alqayser/a/main/MAZEN%20ALQAYSER%20IT%20ENGINEERING%20-%20AI%20DEVELOPER.pdf"
+            class="pdf-button w-full" download>PDF VERSION</a>
+    </header>
 
     <main class="cv-main min-h-screen p-8 md:p-16 md:ml-[20rem] flex-grow">
         <div class="max-w-4xl mx-auto">
             <section id="about" class="mb-12">
                 <h1 class="text-4xl lg:text-5xl font-bold section-heading">
-                    <span class="ai-gradient">MAZEN  ALQAYSER MOHAMED SIDDIG</span>
+                    <span class="ai-gradient">MAZEN ALQAYSER MOHAMED SIDDIG</span>
                 </h1>
                 <h2 class="text-3xl font-bold section-heading mb-4">IT Engineer - AI Developer</h2>
-
-                <div class="subheading mb-3 flex items-center space-x-6">
+                <div
+                    class="subheading mb-3 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-6">
                     <div class="flex items-center space-x-2">
                         <i class="fa-solid fa-envelope text-primary-color"></i>
                         <span class="text-primary-color">mazen.alqayser@icloud.com</span>
                     </div>
-
                     <div class="flex items-center space-x-2">
                         <i class="fa-solid fa-phone text-primary-color"></i>
                         <span class="text-primary-color">+201124592083</span>
@@ -290,31 +299,26 @@
             </section>
         </div>
 
-                       
-        <div class="flex gap-8 mb-6 justify-center items-center">
+        <div class="flex gap-8 mb-6 justify-center items-center flex-wrap">
             <a href="https://www.facebook.com/mazealqayser/" target="_blank"
                 class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition duration-300"
                 title="تابعني على Facebook">
                 <i class="fa-brands fa-facebook-f text-3xl"></i>
             </a>
-
             <a href="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/"
                 target="_blank"
                 class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-700 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition duration-300"
                 title="تابعني على LinkedIn">
                 <i class="fa-brands fa-linkedin-in text-3xl"></i>
             </a>
-
             <a href="https://github.com/mazen-alqayser" target="_blank"
                 class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-800 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition duration-300"
                 title="تابعني على GitHub">
                 <i class="fa-brands fa-github text-3xl"></i>
             </a>
-
         </div>
 
-                   
-                   <p class="lead mb-4 text-justify">
+        <p class="lead mb-4 text-justify">
             <span class="font-bold text-lg">AI & Software Development Specialist</span> with extensive experience in
             <strong>end-to-end software engineering</strong>, <strong>cloud computing</strong>, and
             <strong>mobile app development</strong>. Proven track record in building <strong>intelligent
@@ -370,9 +374,8 @@
             </div>
         </section>
 
-
-                   
         <hr class="border-t border-gray-300 my-8">
+
         <section id="skills" class="mb-12">
             <h2 class="text-4xl font-bold section-heading mb-6">Skills</h2>
 
@@ -424,97 +427,72 @@
             </div>
         </section>
 
-
-                     </div>
-</section>
-
-<hr class="border-t border-gray-300 my-8">
-
-<section id="certificates" class="mb-12">
-    <h2 class="text-4xl font-bold section-heading mb-6 text-left
-">Certificates</h2>
-    <ul class="space-y-3 text-left">
-        <li>
-            <span class="font-bold text-lg">IBM Full-Stack Developer</span>
-            <span class="text-gray-600"> | 15 Certificates</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">IBM AI Developer</span>
-            <span class="text-gray-600"> | 10 Certificates</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">IBM AI Developer Badge</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">React Native and Mobile Developer</span>
-            <span class="text-gray-600"> | Meta</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">Software Developer Reference</span>
-            <span class="text-gray-600"> | IBM</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">Supervisor</span>
-            <span class="text-gray-600"> | Aldahab Company</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">Build a Mobile App with Google Sheets</span>
-            <span class="text-gray-600"> | Glide (No Coding)</span>
-        </li>
-    </ul>
-</section>
-
-<section id="badges" class="mb-12">
-  <h2 class="text-4xl font-bold section-heading mb-6 text-center">Professional Badges</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-<!-- Badge 1: IBM AI Developer -->
-<div class="flex flex-col items-center space-y-2">
-  <a href="https://www.credly.com/badges/47809561-0931-433e-b094-cc29df7a7655" 
-     target="_blank" 
-     class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-blue-500 hover:shadow-2xl">
-
-      <img src="https://images.credly.com/size/680x680/images/70675aed-31be-4c30-add7-b99905a34005/image.png" 
-           alt="IBM AI Developer Badge" 
-           class="w-20 h-20 object-contain">
-  </a>
-  <!-- اسم الشارة خارج الدائرة -->
-  <span class="text-sm font-semibold text-blue-700">
-      IBM AI Developer
-  </span>
-</div>
-
-<!-- Badge 2: React -->
-<div class="flex flex-col items-center space-y-2">
-  <a href="https://www.credly.com/badges/ffa6789f-1e20-465b-bd76-d41934653ad4" 
-     target="_blank" 
-     class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-green-500 hover:shadow-2xl">
-
-      <img src="https://images.credly.com/size/680x680/images/e747147a-9300-4795-8b38-704a133bed88/Coursera_20Front_20end_20Development_20with_20React_20V2.png" 
-           alt="Front-end Development with React V2" 
-           class="w-20 h-20 object-contain">
-  </a>
-  <!-- اسم الشارة خارج الدائرة -->
-  <span class="text-sm font-semibold text-orange-700">
-      Front-End React Developer
-  </span>
-</div>
-
-  </div>
-</section>
-
-
-
-                   
         <hr class="border-t border-gray-300 my-8">
-                   
-                  <section id="organizations" class="mb-12">
+
+        <section id="certificates" class="mb-12">
+            <h2 class="text-4xl font-bold section-heading mb-6 text-left">Certificates</h2>
+            <ul class="space-y-3 text-left">
+                <li>
+                    <span class="font-bold text-lg">IBM Full-Stack Developer</span>
+                    <span class="text-gray-600"> | 15 Certificates</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">IBM AI Developer</span>
+                    <span class="text-gray-600"> | 10 Certificates</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">IBM AI Developer Badge</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">React Native and Mobile Developer</span>
+                    <span class="text-gray-600"> | Meta</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">Software Developer Reference</span>
+                    <span class="text-gray-600"> | IBM</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">Supervisor</span>
+                    <span class="text-gray-600"> | Aldahab Company</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">Build a Mobile App with Google Sheets</span>
+                    <span class="text-gray-600"> | Glide (No Coding)</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="badges" class="mb-12">
+            <h2 class="text-4xl font-bold section-heading mb-6 text-center">Professional Badges</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+                <div class="flex flex-col items-center space-y-2">
+                    <a href="https://www.credly.com/badges/47809561-0931-433e-b094-cc29df7a7655" target="_blank"
+                        class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-blue-500 hover:shadow-2xl">
+                        <img src="https://images.credly.com/size/680x680/images/70675aed-31be-4c30-add7-b99905a34005/image.png"
+                            alt="IBM AI Developer Badge" class="w-20 h-20 object-contain">
+                    </a>
+                    <span class="text-sm font-semibold text-blue-700">IBM AI Developer</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <a href="https://www.credly.com/badges/ffa6789f-1e20-465b-bd76-d41934653ad4" target="_blank"
+                        class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-green-500 hover:shadow-2xl">
+                        <img src="https://images.credly.com/size/680x680/images/e747147a-9300-4795-8b38-704a133bed88/Coursera_20Front_20end_20Development_20with_20React_20V2.png"
+                            alt="Front-end Development with React V2" class="w-20 h-20 object-contain">
+                    </a>
+                    <span class="text-sm font-semibold text-orange-700">Front-End React Developer</span>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-gray-300 my-8">
+
+        <section id="organizations" class="mb-12">
             <h2 class="text-4xl font-bold section-heading mb-6">Organizations</h2>
             <ul class="space-y-3">
                 <li>
                     <span class="font-bold text-lg">Terre des Hommes</span>
                     <span class="text-gray-600"> | Volunteer – ICDL Course</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Samarat</span>
                     <span class="text-gray-600"> | Volunteer</span>
@@ -522,49 +500,41 @@
             </ul>
         </section>
 
-                   
         <hr class="border-t border-gray-300 my-8">
 
-                    <section id="projects" class="mb-12">
+        <section id="projects" class="mb-12">
             <h2 class="text-4xl font-bold section-heading mb-6">Projects</h2>
             <ul class="space-y-4">
                 <li>
                     <span class="font-bold text-lg">AI Chatbot – TDH Assistant Community Platform</span>
                     <span class="text-gray-600"> | Terre des hommes</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Jinja 1 Full Accounting App</span>
                     <span class="text-gray-600"> | Own Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Work Hub App</span>
                     <span class="text-gray-600"> | Own Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Social Media App</span>
                     <span class="text-gray-600"> | Own Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Air-Ticket-Reservation System</span>
                     <span class="text-gray-600"> | University Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Online Sweets Store</span>
                     <span class="text-gray-600"> | University Project</span>
                 </li>
-
                 <li>
                     <span class="italic text-gray-600">(More than 10+ other projects)</span>
                 </li>
             </ul>
         </section>
-
-                </div>
+        </div>
     </main>
 
     <script>
@@ -573,12 +543,10 @@
             const navLinks = document.querySelectorAll('.nav-link');
             const robotContainer = document.getElementById('robot-container');
 
-            // Show robot after a short delay
             setTimeout(() => {
                 robotContainer.classList.add('visible');
             }, 500);
 
-            // Hide robot when scrolling
             let lastScrollY = window.scrollY;
             window.addEventListener('scroll', () => {
                 if (window.scrollY > lastScrollY) {
@@ -589,7 +557,6 @@
                 lastScrollY = window.scrollY;
             });
 
-            // Smooth scroll and active link
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -607,7 +574,6 @@
                 });
             });
 
-            // Intersection Observer to handle active link on scroll
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     const id = entry.target.getAttribute('id');
@@ -627,6 +593,5 @@
         });
     </script>
 </body>
-
 
 </html>
