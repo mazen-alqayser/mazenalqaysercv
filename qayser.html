@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - MAZEN MOHAMED SIDDIG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --europass-blue: #004494;
+            --text-dark: #333;
+            --text-light: #666;
+            --border-color: #d3d3d3;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--europass-blue);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-info h1 {
+            color: var(--europass-blue);
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .header-info h2 {
+            font-size: 18px;
+            color: var(--text-light);
+            margin: 5px 0 15px 0;
+            font-weight: 400;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-item i {
+            color: var(--europass-blue);
+            margin-right: 10px;
+            width: 16px;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 140px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fafafa;
+            color: #ccc;
+            font-size: 11px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--europass-blue);
+            text-transform: uppercase;
+            font-size: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .content {
+            font-size: 13.5px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .skills-category {
+            font-weight: bold;
+            color: var(--europass-blue);
+            font-size: 13px;
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .project-item {
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: #000;
+        }
+
+        @media print {
+            body { background: none; margin: 0; }
+            .container { box-shadow: none; margin: 0; width: 100%; }
+        }
+        .experience-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: baseline;
+    }
+    
+    .job-title {
+        font-weight: bold;
+        color: #000;
+        font-size: 14px;
+    }
+    
+    .company-name {
+        color: var(--europass-blue);
+        font-weight: 600;
+    }
+
+    .experience-content {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .experience-content li {
+        border-left: 2px solid var(--europass-blue);
+        padding-left: 15px;
+        margin-bottom: 12px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-info">
+            <h1>MAZEN MOHAMED SIDDIG</h1>
+            <h2>IT Engineer - AI Developer</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-item"><i class="fa-solid fa-envelope"></i> mazen.alqayser@icloud.com</div>
+                <div class="contact-item"><i class="fa-solid fa-phone"></i> +201124592083</div>
+                <div class="contact-item"><i class="fa-brands fa-linkedin"></i> LinkedIn: Mazen Alqayser</div>
+                <div class="contact-item"><i class="fa-brands fa-github"></i> GitHub: mazen-alqayser</div>
+            </div>
+        </div>
+        <div class="profile-photo">
+            PLACE PHOTO HERE
+        </div>
+    </header>
+
+    <section>
+        <div class="section-title">Professional Summary</div>
+        <div class="content">
+            AI & Software Development Specialist with extensive experience in end-to-end software engineering, cloud computing, and mobile app development. Proven track record in building intelligent chatbots, cross-platform applications, and enterprise systems that enhance collaboration, automate workflows, and drive innovation. Certified by IBM (AI & Full-Stack Development) and Meta (React Native Mobile Development), with deep knowledge in Generative AI, Machine Learning, and DevOps (Docker, Kubernetes, CI/CD, Cloud Security). Skilled in leading teams, delivering scalable solutions, and applying Agile and DevSecOps methodologies to ensure efficiency, reliability, and security. Experienced in collaborating with NGOs and international companies to develop impactful technology platforms that solve real-world challenges.
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">Technical Skills</div>
+        <div class="content">
+            <div class="skills-grid">
+                <div class="skills-category">Programming & Frameworks:</div>
+                <div>Python, PHP, JavaScript (ES6+), HTML5, CSS3, SQL, React.js, React Native, Django, Flask, Tailwind CSS, Redux, Node.js, WordPress, Bootstrap, RESTful API, Full-Stack Development.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">AI & Machine Learning:</div>
+                <div>IBM Certified, Generative AI, LLMs, Machine Learning, AI/ML, Prompt Engineering, ChatGPT, OpenAI, NLP, Predictive Analytics, OOP, Software Design Patterns.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">Cloud & DevOps:</div>
+                <div>Docker, Kubernetes, CI/CD, DevSecOps, Cloud Computing, Containerization, Microservices, IBM Cloud, PaaS, API Gateway, SOA, Istio, OpenShift, Cloud Security.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">Databases:</div>
+                <div>SQL, NoSQL, Firebase, Supabase, Relational Databases, DBMS, ORM.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">Mobile Development:</div>
+                <div>Meta & Zain Certified, React Native, Cross-platform, Android, Kotlin, Swift, Google Glide.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">Networking & IT:</div>
+                <div>Remote Access, CCNA (Beginner), ICDL, Computer & Network Administration, CLI, Linux, IDEs, Virtual Environment.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">Tools & QA:</div>
+                <div>Git, GitHub, Version Control, Code Review, Software Testing, Functional Testing, Integration Testing, Unit Testing, Jest, Quality Assurance.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">Professional Skills:</div>
+                <div>Agile Project Management, SDLC Models (V-Model, Spiral, Big Bang), DevOps, ALM, Presentation, Negotiation.</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">Education</div>
+        <div class="content">
+            <div style="font-weight: bold; font-size: 15px;">Bachelor of (Honours) in Information Technology</div>
+            <div>Future University</div>
+            <br>
+            <div style="font-weight: bold;">Professional Certificates:</div>
+            <ul>
+                <li>Professional Certificate in Artificial Intelligence Developer | IBM</li>
+                <li>Full-Stack Software Developer Professional Certification | IBM</li>
+                <li>Meta React Native Mobile Developer Certification | Meta</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">Projects</div>
+        <div class="content">
+            <div class="project-item"><span class="project-title">AI Chatbot – TDH Assistant Community Platform:</span> Developed for Terre des hommes to assist community members.</div>
+            <div class="project-item"><span class="project-title">VEES ERP System:</span> Personal project for comprehensive accounting management.</div>
+            <div class="project-item"><span class="project-title">VEES LMS System:</span> Personal project to digitize education.</div>
+            <div class="project-item"><span class="project-title">Work Hub App:</span> Original project designed to enhance collaboration and workflow management.</div>
+            <div class="project-item"><span class="project-title">Air-Ticket-Reservation System:</span> University project demonstrating system design skills.</div>
+            <div class="project-item"><span class="project-title">Online Stores:</span> e-commerce project.</div>
+            <div style="margin-top: 5px; font-style: italic;">And a number of other projects.</div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">Certifications & Badges</div>
+        <div class="content">
+            <ul>
+                <li>IBM Full-Stack Developer (15 Certificates)</li>
+                <li>IBM AI Developer (11 Certificates)</li>
+                <li>IBM AI Developer Badge</li>
+                <li>React Native and Mobile Developer | Meta</li>
+                <li>Software Developer Reference | IBM</li>
+                <li>Role in digital security and human rights | Amnesty international</li>
+                <li>Supervisor | Aldahab Company</li>
+                <li>Build a Mobile App with Google Sheets | Glide</li>
+                <li>Additional academic degrees and training courses available.</li>
+            </ul>
+        </div>
+    </section>
+
+     <section>
+    <div class="section-title">Work Experience</div>
+    <div class="content">
+        <ul class="experience-content">
+            <li>
+                <div class="experience-item">
+                    <span class="job-title">IT-Manager</span>
+                    <span class="company-name">Green Life</span>
+                </div>
+            </li>
+            <li>
+                <div class="experience-item">
+                    <span class="job-title">Supervisor</span>
+                    <span class="company-name">Aldahab-Golden Fruit</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+    <section>
+        <div class="section-title">Organizations</div>
+        <div class="content">
+            <ul>
+                <li><strong>Terre des Hommes:</strong> Volunteer – IT - ICDL Course Instructor.</li>
+                <li><strong>Samarat:</strong> Volunteer.</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
