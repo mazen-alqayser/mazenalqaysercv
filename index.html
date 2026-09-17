@@ -1,754 +1,2077 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="ltr" class="scroll-smooth">
+<!--
+  ══════════════════════════════════════════════════════════════════════
+   MAZEN ALQAYSER — PERSONAL PORTFOLIO · الموقع الشخصي
+   Hand-coded from scratch — no templates, no page builders.
+   صُمِّم وبُرْمِج يدوياً سطراً بسطر.
+   © 2025 Mazen Alqayser · مازن القيصر — All rights reserved.
+  ══════════════════════════════════════════════════════════════════════
+-->
+<html lang="en" dir="ltr" class="scroll-smooth">
 
 <head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MAZEN ALQAYSER | IT Engineering & AI Developer - مازن القيصر</title>
+  <!-- ═══════════ SEO — الأساسيات ═══════════ -->
+  <title>Mazen Alqayser | Full Stack Software Developer &amp; AI Developer — مازن القيصر</title>
+  <meta name="description" content="Portfolio of Mazen Alqayser — Full Stack Software Developer & AI Developer, certified by IBM & Meta. ERP/LMS systems, AI chatbots, mobile apps, cloud & DevOps. الموقع الرسمي لمازن القيصر — مهندس تطوير برمجيات متكامل ومطور ذكاء اصطناعي.">
+  <meta name="keywords" content="Mazen Alqayser, Mazen Mohamed Siddig, Full Stack Software Developer, AI Developer, Software Engineer, Web Developer, React, Django, React Native, Docker, Kubernetes, AWS, Azure, Machine Learning, Generative AI, مازن القيصر, مهندس تطوير برمجيات متكامل, مطور ذكاء اصطناعي, تطوير ويب, بورتفوليو, السودان, الإمارات">
+  <meta name="author" content="Mazen Alqayser">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="geo.region" content="AE">
+  <meta name="format-detection" content="telephone=yes">
+  <!-- ملاحظة: أضف هنا وسوم التحقق الخاصة بك عند نشر الموقع
+       مثال: <meta name="google-site-verification" content="CODE">     -->
 
-    <meta name="description" content="مازن القيصر - مهندس تقنية معلومات ومطور ذكاء اصطناعي. متخصص في بناء الحلول البرمجية المتقدمة. Mazen Alqayser - IT Engineering and AI Developer specialized in advanced software solutions.">
+  <!-- ═══════════ Canonical & hreflang ═══════════ -->
+  <link rel="canonical" href="https://www.mazenalqayser.com/">
+  <link rel="alternate" hreflang="en" href="https://www.mazenalqayser.com/?lang=en">
+  <link rel="alternate" hreflang="ar" href="https://www.mazenalqayser.com/?lang=ar">
+  <link rel="alternate" hreflang="x-default" href="https://www.mazenalqayser.com/">
 
-    <meta name="keywords" content="Mazen Alqayser, AI Developer, IT Engineering, Software Engineer, مازن القيصر, مطور ذكاء اصطناعي, هندسة تقنية المعلومات, برمجيات">
-    <meta name="author" content="Mazen Alqayser">
+  <!-- ═══════════ Favicon — صورة العلامة عبر GitHub ═══════════ -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/mazen-alqayser/mazenalqayser/main/favicon.png">
+  <link rel="apple-touch-icon" type="image/png" href="https://raw.githubusercontent.com/mazen-alqayser/mazenalqayser/main/favicon.png">
+  <link rel="mask-icon" href="https://raw.githubusercontent.com/mazen-alqayser/mazenalqayser/main/favicon.png" color="#3b82f6">
 
-    <link rel="icon" type="image/png" href="favicon.png">
+  <!-- ═══════════ Open Graph — فيسبوك / واتساب ═══════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mazenalqayser.com/">
+  <meta property="og:site_name" content="Mazen Alqayser — Portfolio">
+  <meta property="og:title" content="Mazen Alqayser | Full Stack Software Developer &amp; AI Developer">
+  <meta property="og:description" content="Full Stack Software Developer & AI Developer — certified by IBM &amp; Meta. AI systems, ERP/LMS platforms, mobile apps, cloud &amp; DevOps. اكتشف أعمال مازن القيصر في تطوير البرمجيات والذكاء الاصطناعي.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/mazen-alqayser/mazenalqayser/main/favicon.png">
+  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/mazen-alqayser/mazenalqayser/main/favicon.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Mazen Alqayser — Full Stack Software Developer &amp; AI Developer">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:see_also" content="https://github.com/mazen-alqayser">
+  <meta property="og:see_also" content="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/">
+  <meta property="og:see_also" content="https://www.facebook.com/mazealqayser/">
 
-    <meta property="og:title" content="MAZEN ALQAYSER | IT ENGINEERING - AI DEVELOPER">
-    <meta property="og:description" content="Portfolio of Mazen Alqayser - IT Engineering & AI Specialist. اكتشف أعمال مازن القيصر في هندسة تقنية المعلومات والذكاء الاصطناعي.">
-    <meta property="og:image" content="images/og-preview.png"> <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.mazenalqayser.com"> <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/a1351543ed.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- ═══════════ Twitter Card ═══════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mazen Alqayser | Full Stack Software Developer &amp; AI Developer">
+  <meta name="twitter:description" content="AI systems, ERP/LMS platforms, mobile apps, cloud &amp; DevOps — certified by IBM &amp; Meta. مازن القيصر — مطور برمجيات وذكاء اصطناعي.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/mazen-alqayser/mazenalqayser/main/favicon.png">
+  <meta name="twitter:image:alt" content="Mazen Alqayser — Portfolio">
 
-    <meta name="robots" content="index, follow">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        tech: ['Orbitron', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: '#3B82F6',
-                        secondary: '#8B5CF6',
-                        darkBg: '#0f172a',
-                        cardDark: '#1e293b',
-                        lightBg: '#f8fafc',
-                    },
-                    animation: {
-                        'spin-slow': 'spin 8s linear infinite',
-                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        'pulse-glow': {
-                            '0%, 100%': { opacity: 1, boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
-                            '50%': { opacity: .8, boxShadow: '0 0 10px rgba(59, 130, 246, 0.2)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+  <!-- ═══════════ Structured Data — JSON-LD ═══════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.mazenalqayser.com/#person",
+        "name": "Mazen Mohamed Siddig Alqayser",
+        "alternateName": ["Mazen Alqayser", "مازن القيصر", "مازن محمد صديق"],
+        "url": "https://www.mazenalqayser.com/",
+        "image": "https://raw.githubusercontent.com/mazen-alqayser/mazenalqayser/main/favicon.png",
+        "email": "mailto:mazen.alqayser@icloud.com",
+        "telephone": ["+971553775669", "+201124592083"],
+        "jobTitle": "Full Stack Software Developer & AI Developer",
+        "description": "AI & Software Development Specialist with extensive experience in end-to-end software engineering, cloud computing, and mobile app development. Certified by IBM and Meta.",
+        "knowsLanguage": ["ar", "en"],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Future University" },
+          { "@type": "Organization", "name": "IBM" },
+          { "@type": "Organization", "name": "Meta" }
+        ],
+        "knowsAbout": ["Full-Stack Development", "Generative AI", "Machine Learning", "React.js", "Django", "React Native", "Docker", "Kubernetes", "AWS", "Azure", "CI/CD", "DevSecOps", "Agile", "Database Design"],
+        "sameAs": [
+          "https://github.com/mazen-alqayser",
+          "https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/",
+          "https://www.facebook.com/mazealqayser/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.mazenalqayser.com/#website",
+        "url": "https://www.mazenalqayser.com/",
+        "name": "Mazen Alqayser — Portfolio",
+        "inLanguage": ["ar", "en"],
+        "publisher": { "@id": "https://www.mazenalqayser.com/#person" }
+      }
+    ]
+  }
+  </script>
 
-    <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1e293b; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #3B82F6, #8B5CF6); 
-            border-radius: 4px;
-        }
+  <!-- ═══════════ Early boot: language + theme (قبل الرسم لتجنب الوميض) ═══════════ -->
+  <script>
+  (function () {
+    try {
+      var q = null, s = null;
+      try { q = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+      try { s = localStorage.getItem('mz-lang'); } catch (e) {}
+      var n = (navigator.language || 'en').toLowerCase();
+      var lang = q || s || (n.indexOf('ar') === 0 ? 'ar' : 'en');
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+      var t = null;
+      try { t = localStorage.getItem('mz-theme'); } catch (e) {}
+      var dark = t ? (t === 'dark') : (window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)').matches : true);
+      if (dark) document.documentElement.classList.add('dark');
+    } catch (e) {}
+  })();
+  </script>
 
-        /* Glassmorphism Classes */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .dark .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
+  <!-- ═══════════ Fonts & Libraries ═══════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;800&family=Cairo:wght@400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-        /* Gradient Text */
-        .text-gradient {
-            background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'Tajawal', 'sans-serif'],
+            display: ['Orbitron', 'Cairo', 'sans-serif']
+          },
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#8b5cf6',
+            darkBg: '#0f172a',
+            cardDark: '#1e293b',
+            lightBg: '#f8fafc'
+          },
+          animation: {
+            'spin-slow': 'spin 9s linear infinite'
+          }
         }
+      }
+    };
+  </script>
 
-        /* Section Heading Line */
-        .heading-line::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #3B82F6, #8B5CF6);
-            margin-top: 0.5rem;
-            border-radius: 2px;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-        /* Tech Grid Background */
-        .bg-grid {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
-        }
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
-        /* Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Robot Styling Update */
-        .robot-container {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-    </style>
+  <!-- ═══════════ Custom Stylesheet ═══════════ -->
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --secondary: #8b5cf6;
+      --ink: #0f172a;
+      --line: rgba(15, 23, 42, .09);
+      --grid: rgba(59, 130, 246, .055);
+      --glass: rgba(255, 255, 255, .74);
+    }
+    .dark {
+      --line: rgba(148, 163, 184, .14);
+      --grid: rgba(96, 165, 250, .07);
+      --glass: rgba(15, 23, 42, .66);
+    }
+
+    /* ---------- Base ---------- */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', 'Tajawal', system-ui, sans-serif; overflow-x: hidden; }
+    html[lang="ar"] body { font-family: 'Tajawal', 'Cairo', sans-serif; line-height: 1.85; }
+    html[lang="ar"] * { letter-spacing: 0 !important; }
+
+    .font-display { font-family: 'Orbitron', 'Outfit', sans-serif; }
+    html[lang="ar"] .font-display { font-family: 'Cairo', 'Tajawal', sans-serif; }
+
+    ::selection { background: rgba(59, 130, 246, .3); }
+    :focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; border-radius: 4px; }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(148, 163, 184, .12); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #3b82f6, #8b5cf6); border-radius: 6px; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* ---------- Background decoration ---------- */
+    .bg-decor {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    .bg-decor::after {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(640px circle at 85% 8%, rgba(59, 130, 246, .09), transparent 60%),
+        radial-gradient(760px circle at 8% 88%, rgba(139, 92, 246, .08), transparent 60%);
+    }
+
+    /* ---------- Reusable components ---------- */
+    .glass {
+      background: var(--glass);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, .05);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px -18px rgba(15, 23, 42, .25); border-color: rgba(59, 130, 246, .4); }
+    .dark .card { background: #1e293b; box-shadow: 0 1px 3px rgba(0, 0, 0, .3); }
+    .dark .card:hover { box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .55); }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* ---------- Section headings ---------- */
+    .sec-head { display: flex; align-items: center; gap: .9rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .sec-num {
+      color: #3b82f6; font-size: .8rem; font-weight: 700; letter-spacing: .18em;
+      border: 1px solid rgba(59, 130, 246, .38); background: rgba(59, 130, 246, .07);
+      border-radius: .55rem; padding: .22rem .6rem;
+    }
+    .sec-title { font-size: clamp(1.55rem, 2.6vw, 2.05rem); font-weight: 800; color: #0f172a; line-height: 1.2; }
+    .dark .sec-title { color: #f1f5f9; }
+    .sec-line { flex: 1; height: 2px; min-width: 60px; max-width: 180px; margin-inline-start: auto; border-radius: 2px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6, transparent); }
+    .sec-sub { color: #64748b; font-size: .95rem; margin: -.9rem 0 1.9rem; }
+    .dark .sec-sub { color: #94a3b8; }
+
+    /* ---------- Sidebar (logical positioning — ينقلب تلقائياً مع RTL) ---------- */
+    .sidebar { display: flex; flex-direction: column; align-items: center; }
+    #sideNav ul { display: flex; flex-direction: column; gap: .4rem; width: 100%; }
+    @media (min-width: 768px) {
+      .sidebar { position: fixed; inset-block: 0; inset-inline-start: 0; width: 20rem; height: 100vh; overflow-y: auto; padding: 2rem 1.5rem; }
+      .main-col { margin-inline-start: 20rem; }
+    }
+    @media (max-width: 767px) {
+      .sidebar { padding: 5.5rem 1.25rem 1.5rem; }
+      #sideNav ul { flex-direction: row; overflow-x: auto; padding-bottom: .5rem; -webkit-overflow-scrolling: touch; }
+      .nav-link { white-space: nowrap; }
+    }
+    .nav-link {
+      display: block; padding: .5rem 1rem; border-radius: .7rem; font-size: .8rem;
+      font-weight: 600; letter-spacing: .12em; color: #475569; transition: all .25s ease;
+    }
+    .dark .nav-link { color: #94a3b8; }
+    .nav-link:hover { background: rgba(59, 130, 246, .09); color: #3b82f6; }
+    .dark .nav-link:hover { background: rgba(59, 130, 246, .14); color: #93c5fd; }
+    .nav-link.active {
+      background: linear-gradient(135deg, rgba(59, 130, 246, .14), rgba(139, 92, 246, .14));
+      color: #3b82f6; box-shadow: inset 0 0 0 1px rgba(59, 130, 246, .3);
+    }
+    .dark .nav-link.active { color: #93c5fd; }
+
+    /* ---------- Floating controls ---------- */
+    .float-tools { position: fixed; top: 1.1rem; inset-inline-end: 1.1rem; z-index: 60; display: flex; gap: .5rem; }
+    .tool-btn {
+      width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+      border: 1px solid var(--line); background: var(--glass); backdrop-filter: blur(12px);
+      box-shadow: 0 6px 20px -6px rgba(15, 23, 42, .25); transition: transform .25s ease;
+    }
+    .tool-btn:hover { transform: scale(1.1) rotate(6deg); }
+    .lang-pill {
+      display: flex; align-items: center; border-radius: 999px; overflow: hidden; cursor: pointer;
+      border: 1px solid var(--line); background: var(--glass); backdrop-filter: blur(12px);
+      box-shadow: 0 6px 20px -6px rgba(15, 23, 42, .25); height: 44px;
+    }
+    .lang-opt { border: none; background: transparent; padding: 0 .85rem; height: 100%; cursor: pointer; font-weight: 800; font-size: .8rem; color: #64748b; font-family: 'Outfit', 'Tajawal', sans-serif; transition: all .2s; }
+    .lang-opt:hover { color: #3b82f6; }
+    .lang-opt.lang-active { background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; }
+    .lang-sep { width: 1px; height: 22px; background: var(--line); }
+
+    .scroll-progress {
+      position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 70;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6); border-radius: 0 3px 3px 0;
+    }
+    .to-top {
+      position: fixed; bottom: 1.25rem; inset-inline-start: 1.25rem; z-index: 50;
+      width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); cursor: pointer;
+      background: var(--glass); backdrop-filter: blur(12px); color: #3b82f6; display: grid; place-items: center;
+      box-shadow: 0 8px 24px -8px rgba(15, 23, 42, .3);
+      opacity: 0; visibility: hidden; transform: translateY(12px); transition: all .3s ease;
+    }
+    .to-top.show { opacity: 1; visibility: visible; transform: none; }
+    .to-top:hover { color: #8b5cf6; transform: translateY(-3px); }
+
+    /* ---------- Reveal animations ---------- */
+    .reveal { opacity: 0; transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.2, .7, .3, 1), transform .7s cubic-bezier(.2, .7, .3, 1);
+      transition-delay: var(--d, 0ms); }
+    .reveal.active { opacity: 1; transform: none; }
+
+    /* ---------- Hero ---------- */
+    .status-badge {
+      display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; font-weight: 600;
+      padding: .38rem .9rem; border-radius: 999px; border: 1px solid rgba(34, 197, 94, .35);
+      background: rgba(34, 197, 94, .08); color: #16a34a;
+    }
+    .dark .status-badge { color: #4ade80; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 0 rgba(34, 197, 94, .6); animation: dotPulse 2s infinite; }
+    @keyframes dotPulse { 70% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+
+    .caret { display: inline-block; width: 3px; height: 1.15em; margin-inline-start: 4px; vertical-align: text-bottom;
+      background: linear-gradient(180deg, #3b82f6, #8b5cf6); animation: caretBlink 1s step-end infinite; border-radius: 2px; }
+    @keyframes caretBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .stats-row { display: flex; flex-wrap: wrap; gap: 1rem 0; }
+    .stat { flex: 1 1 120px; text-align: center; }
+    .stat + .stat { border-inline-start: 1px solid var(--line); }
+    .stat-num { font-size: 1.9rem; font-weight: 900; color: #0f172a; }
+    .dark .stat-num { color: #f1f5f9; }
+    .stat-label { display: block; font-size: .74rem; font-weight: 600; color: #64748b; margin-top: .15rem; letter-spacing: .06em; }
+    .dark .stat-label { color: #94a3b8; }
+
+    /* ---------- Marquee ---------- */
+    .marquee { overflow: hidden; direction: ltr;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+    .marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee-group { display: flex; align-items: center; gap: 2.6rem; padding-inline-end: 2.6rem; }
+    .marquee-item { display: flex; align-items: center; gap: .6rem; font-size: .88rem; font-weight: 600; color: #64748b; white-space: nowrap; }
+    .dark .marquee-item { color: #94a3b8; }
+    .marquee-item i { font-size: 1.5rem; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* ---------- Timeline (Experience) ---------- */
+    .timeline { position: relative; padding-inline-start: 2.2rem; display: flex; flex-direction: column; gap: 1.4rem; }
+    .timeline::before { content: ''; position: absolute; inset-block: 8px; inset-inline-start: 7px; width: 2px;
+      background: linear-gradient(180deg, #3b82f6, #8b5cf6, rgba(139, 92, 246, 0)); border-radius: 2px; }
+    .tl-item { position: relative; }
+    .tl-dot { position: absolute; inset-inline-start: -2.2rem; top: 1.5rem; width: 16px; height: 16px; border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6); box-shadow: 0 0 0 4px rgba(59, 130, 246, .18); }
+    .tl-icon { width: 52px; height: 52px; border-radius: 1rem; display: grid; place-items: center; font-size: 1.25rem; flex-shrink: 0; }
+    .tl-icon-blue   { background: linear-gradient(135deg, rgba(59,130,246,.15), rgba(139,92,246,.15)); color: #3b82f6; }
+    .tl-icon-amber  { background: rgba(245,158,11,.14); color: #f59e0b; }
+    .tl-icon-green  { background: rgba(34,197,94,.14); color: #22c55e; }
+    .tl-icon-gold   { background: rgba(234,179,8,.16); color: #eab308; }
+    .tl-icon-violet { background: rgba(168,85,247,.14); color: #a855f7; }
+    .tl-tag { font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #8b5cf6;
+      border: 1px solid rgba(139, 92, 246, .4); border-radius: 999px; padding: .22rem .6rem; white-space: nowrap; }
+    .tl-points li { display: flex; gap: .6rem; align-items: flex-start; margin-top: .35rem; font-size: .92rem; }
+    .tl-points li i { color: #3b82f6; margin-top: .3rem; font-size: .8rem; }
+    .tl-meta { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .8rem; }
+    .tl-meta span { font-size: .68rem; font-weight: 700; color: #64748b; background: rgba(100, 116, 139, .1);
+      border-radius: .45rem; padding: .2rem .55rem; letter-spacing: .04em; }
+    .dark .tl-meta span { color: #94a3b8; background: rgba(148, 163, 184, .12); }
+
+    /* ---------- Skills ---------- */
+    .tech-icons { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 1.9rem; }
+    .tech-icons i { transition: transform .25s ease, filter .25s ease; cursor: default; }
+    .tech-icons i:hover { transform: scale(1.28) translateY(-2px); }
+    .icon-mono { color: #334155; }
+    .dark .icon-mono { color: #cbd5e1; }
+
+    .tag { display: inline-block; padding: .32rem .75rem; border-radius: .55rem; font-size: .8rem; font-weight: 600;
+      background: rgba(100, 116, 139, .09); color: #475569; border: 1px solid var(--line); transition: all .2s ease; }
+    .dark .tag { background: rgba(148, 163, 184, .1); color: #cbd5e1; }
+    .tag:hover { border-color: rgba(59, 130, 246, .5); color: #3b82f6; transform: translateY(-2px); }
+    .tag-hot { background: rgba(59, 130, 246, .1); color: #3b82f6; border-color: rgba(59, 130, 246, .35); font-weight: 700; }
+    .dark .tag-hot { color: #93c5fd; background: rgba(59, 130, 246, .16); }
+    .skill-group-title { display: flex; align-items: center; gap: .6rem; font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem; }
+    .dark .skill-group-title { color: #e2e8f0; }
+    .skill-group-title::before { content: ''; width: 5px; height: 22px; border-radius: 3px; background: linear-gradient(180deg, #3b82f6, #8b5cf6); }
+
+    /* ---------- Certificates badges ---------- */
+    .badge-circle { width: 96px; height: 96px; border-radius: 50%; background: #fff; display: grid; place-items: center;
+      box-shadow: 0 0 22px -6px rgba(59, 130, 246, .5); transition: transform .3s ease; }
+    .badge-circle:hover { transform: scale(1.1) rotate(-4deg); }
+
+    /* ---------- Books / Publications ---------- */
+    .pub-badge { font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; border-radius: 999px; padding: .3rem .8rem; }
+
+    /* ---------- WhatsApp assistant ---------- */
+    .wa-dock { position: fixed; bottom: 1.25rem; inset-inline-end: 1.25rem; z-index: 55; }
+    @media (max-width: 640px) { .wa-dock { bottom: .9rem; inset-inline-end: .9rem; } }
+
+    .robot-btn { position: relative; width: 62px; height: 62px; border-radius: 50%; border: none; cursor: pointer;
+      background: linear-gradient(135deg, #2563eb, #7c3aed); box-shadow: 0 12px 30px -8px rgba(59, 130, 246, .55);
+      display: grid; place-items: center; transition: transform .3s ease, box-shadow .3s ease; }
+    .robot-btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 16px 38px -8px rgba(139, 92, 246, .6); }
+    .robot-btn::after { content: ''; position: absolute; inset: -6px; border-radius: 50%;
+      border: 2px solid rgba(59, 130, 246, .35); animation: ringPulse 2.6s ease-out infinite; }
+    .robot-on { transform: translateY(-2px) scale(.95); box-shadow: 0 0 0 4px rgba(37, 211, 102, .3), 0 12px 30px -8px rgba(37, 211, 102, .55); }
+    .robot-on::after { display: none; }
+    @keyframes ringPulse { 0% { transform: scale(.85); opacity: 1; } 100% { transform: scale(1.35); opacity: 0; } }
+
+    .robot { position: relative; width: 34px; height: 30px; animation: bob 4s ease-in-out infinite; }
+    @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    .robot .antenna { position: absolute; top: -7px; left: 50%; width: 2px; height: 7px; margin-left: -1px; background: #fff; border-radius: 2px; opacity: .9; }
+    .robot .antenna::after { content: ''; position: absolute; top: -4px; left: 50%; width: 5px; height: 5px; margin-left: -2.5px;
+      border-radius: 50%; background: #4ade80; box-shadow: 0 0 6px #4ade80; animation: antennaPulse 2s infinite; }
+    @keyframes antennaPulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+    .robot .head { position: absolute; inset: 3px 0 0 0; background: #fff; border-radius: 10px; }
+    .robot .eye { position: absolute; top: 9px; left: 8px; width: 6px; height: 6px; border-radius: 50%; background: #1e293b; animation: blink 4.5s infinite; }
+    .robot .head span:nth-of-type(2) { left: auto; right: 8px; }
+    .robot .mouth { position: absolute; bottom: 6px; left: 50%; width: 10px; height: 4px; margin-left: -5px; border-radius: 3px; background: #1e293b; opacity: .7; }
+    @keyframes blink { 0%, 91%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.12); } }
+    .robot-wa { position: absolute; bottom: -3px; inset-inline-end: -3px; width: 22px; height: 22px; border-radius: 50%;
+      background: #25d366; display: grid; place-items: center; color: #fff; font-size: 11px; border: 2px solid #f8fafc; }
+    .dark .robot-wa { border-color: #0f172a; }
+    .robot-tip { position: absolute; bottom: calc(100% + 12px); inset-inline-end: 0; white-space: nowrap; font-size: .72rem; font-weight: 700;
+      background: #0f172a; color: #e2e8f0; border-radius: .6rem; padding: .4rem .7rem; opacity: 0; pointer-events: none; transition: opacity .25s; }
+    .robot-btn:hover .robot-tip, .robot-btn:focus-visible .robot-tip { opacity: 1; }
+
+    .wa-panel { position: absolute; bottom: calc(100% + 16px); inset-inline-end: 0; width: min(360px, calc(100vw - 2rem));
+      border-radius: 1.1rem; overflow: hidden; background: #fff; border: 1px solid var(--line);
+      box-shadow: 0 24px 60px -12px rgba(2, 6, 23, .45);
+      opacity: 0; visibility: hidden; transform: translateY(14px) scale(.96); transform-origin: bottom;
+      transition: opacity .28s cubic-bezier(.2, .8, .3, 1), transform .28s cubic-bezier(.2, .8, .3, 1), visibility .28s; z-index: 6; }
+    .wa-panel.open { opacity: 1; visibility: visible; transform: none; }
+    .dark .wa-panel { background: #111c33; }
+    .wa-header { display: flex; align-items: center; gap: .7rem; padding: .85rem 1rem; background: linear-gradient(135deg, #075e54, #128c7e); color: #fff; }
+    .wa-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, .18); display: grid; place-items: center; font-size: 1.1rem; flex-shrink: 0; }
+    .wa-header-info { flex: 1; display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
+    .wa-header-info strong { font-size: .92rem; }
+    .wa-status { font-size: .7rem; opacity: .92; display: flex; align-items: center; gap: .32rem; }
+    .wa-status-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+    .wa-close { background: transparent; border: none; color: #fff; opacity: .85; cursor: pointer; font-size: 1rem; padding: .35rem; border-radius: .5rem; transition: .2s; }
+    .wa-close:hover { opacity: 1; background: rgba(255, 255, 255, .16); }
+    .wa-messages { height: 225px; overflow-y: auto; padding: .9rem; display: flex; flex-direction: column; gap: .5rem; background: #ece5dd; }
+    .dark .wa-messages { background: #0b1526; }
+    .wa-msg { max-width: 84%; width: fit-content; padding: .55rem .8rem; border-radius: .9rem; font-size: .85rem; line-height: 1.55; box-shadow: 0 1px 2px rgba(0, 0, 0, .08); }
+    .wa-msg.bot { background: #fff; color: #1e293b; border-start-start-radius: .25rem; align-self: flex-start; }
+    .dark .wa-msg.bot { background: #1e293b; color: #e2e8f0; }
+    .wa-msg.user { background: #d6f5c6; color: #14532d; border-start-end-radius: .25rem; align-self: flex-end; }
+    .dark .wa-msg.user { background: #175c3c; color: #dcfce7; }
+    .wa-msg.typing { display: flex; gap: 5px; align-items: center; padding: .75rem .95rem; }
+    .wa-msg.typing span { width: 7px; height: 7px; border-radius: 50%; background: #94a3b8; animation: typingDot 1.2s infinite; }
+    .wa-msg.typing span:nth-child(2) { animation-delay: .15s; }
+    .wa-msg.typing span:nth-child(3) { animation-delay: .3s; }
+    @keyframes typingDot { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-4px); opacity: 1; } }
+    .wa-chips { display: flex; flex-wrap: wrap; gap: .4rem; padding: .55rem .9rem .7rem; }
+    .wa-chip { border: 1px solid rgba(59, 130, 246, .45); color: #3b82f6; background: rgba(59, 130, 246, .07);
+      padding: .35rem .7rem; border-radius: 999px; font-size: .74rem; font-weight: 700; cursor: pointer; transition: .2s; font-family: inherit; }
+    .wa-chip:hover { background: #3b82f6; color: #fff; }
+    .dark .wa-chip { color: #93c5fd; border-color: rgba(147, 197, 253, .4); background: rgba(59, 130, 246, .14); }
+    .dark .wa-chip:hover { background: #3b82f6; color: #fff; }
+    .wa-footer { display: flex; gap: .5rem; padding: .7rem .9rem .85rem; border-top: 1px solid var(--line); }
+    #waInput { flex: 1; min-width: 0; border: 1px solid var(--line); background: transparent; border-radius: 999px;
+      padding: .55rem .95rem; font-size: .85rem; color: inherit; outline: none; font-family: inherit; transition: .2s; }
+    #waInput:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, .15); }
+    .wa-send { display: flex; align-items: center; gap: .45rem; border: none; cursor: pointer;
+      background: linear-gradient(135deg, #128c7e, #25d366); color: #fff; padding: .55rem 1.05rem; border-radius: 999px;
+      font-weight: 700; font-size: .8rem; transition: .2s; font-family: inherit; flex-shrink: 0; }
+    .wa-send:hover { transform: translateY(-1px); box-shadow: 0 6px 18px -4px rgba(37, 211, 102, .5); }
+
+    /* ---------- Toast ---------- */
+    .toast { position: fixed; bottom: 5.6rem; left: 50%; transform: translate(-50%, 16px); z-index: 100;
+      background: #0f172a; color: #f1f5f9; font-size: .84rem; font-weight: 600; padding: .7rem 1.2rem; border-radius: .8rem;
+      box-shadow: 0 14px 34px -10px rgba(2, 6, 23, .55); border: 1px solid rgba(148, 163, 184, .2);
+      opacity: 0; visibility: hidden; transition: all .3s ease; max-width: min(92vw, 480px); text-align: center; }
+    .toast.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* ---------- Print (الصفحة الرئيسية) ---------- */
+    @media print {
+      .float-tools, .wa-dock, .to-top, .scroll-progress, .sidebar, .marquee { display: none !important; }
+      .main-col { margin: 0 !important; }
+    }
+  </style>
 </head>
 
-<body class="bg-lightBg dark:bg-darkBg text-slate-700 dark:text-slate-300 transition-colors duration-300 font-sans relative overflow-x-hidden bg-grid">
+<body class="bg-lightBg dark:bg-darkBg text-slate-700 dark:text-slate-300 transition-colors duration-300 antialiased relative">
 
-    <button id="theme-toggle" class="fixed top-6 right-6 z-50 p-3 rounded-full glass-panel shadow-lg hover:scale-110 transition-transform duration-300 group">
-        <i class="fas fa-sun text-yellow-500 text-xl dark:hidden"></i>
-        <i class="fas fa-moon text-primary text-xl hidden dark:block"></i>
+  <!-- خلفية زخرفية -->
+  <div class="bg-decor" aria-hidden="true"></div>
+
+  <!-- شريط تقدم القراءة -->
+  <div id="progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══════════ أدوات عائمة: اللغة + السمة ═══════════ -->
+  <div class="float-tools" role="group" aria-label="Site controls">
+    <div class="lang-pill" aria-label="Language switcher">
+      <button id="langEN" class="lang-opt" type="button" aria-label="English">EN</button>
+      <span class="lang-sep" aria-hidden="true"></span>
+      <button id="langAR" class="lang-opt" type="button" aria-label="العربية">ع</button>
+    </div>
+    <button id="themeToggle" class="tool-btn" type="button" aria-label="Toggle dark / light mode">
+      <i class="fa-solid fa-sun text-yellow-500 text-lg dark:hidden" aria-hidden="true"></i>
+      <i class="fa-solid fa-moon text-primary text-lg hidden dark:block" aria-hidden="true"></i>
     </button>
+  </div>
 
-    <div id="robot-container" class="robot-container fixed bottom-8 right-8 z-40 w-16 h-16 glass-panel rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.3)] cursor-pointer hover:shadow-[0_0_30px_rgba(139,92,246,0.6)] translate-x-[200%]">
-        <div class="robot-head w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full relative animate-bounce">
-            <div class="absolute top-2 left-1.5 w-1.5 h-1.5 bg-white rounded-full"></div>
-            <div class="absolute top-2 right-1.5 w-1.5 h-1.5 bg-white rounded-full"></div>
+  <div class="relative">
+
+    <!-- ═══════════ الشريط الجانبي ═══════════ -->
+    <nav id="sideNav" class="sidebar glass z-30 border-b md:border-b-0 md:border-s border-gray-200 dark:border-gray-800" aria-label="Main navigation">
+
+      <div class="mb-6 relative group">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-60 group-hover:opacity-100 transition duration-700" aria-hidden="true"></div>
+        <div class="relative w-36 h-36 md:w-40 md:h-40 rounded-full grid place-items-center bg-gradient-to-br from-blue-600 to-purple-600 text-white font-display text-4xl font-bold">
+          MA
+          <img class="absolute inset-0 w-full h-full rounded-full object-cover border-4 border-white dark:border-slate-800 bg-white"
+               src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG"
+               onerror="this.style.display='none'"
+               width="160" height="160"
+               alt="Mazen Alqayser" data-ar-alt="مازن القيصر">
         </div>
-    </div>
+      </div>
 
-    <div class="md:flex">
-        <nav id="sideNav" class="glass-panel w-full md:w-80 md:h-screen md:fixed md:top-0 md:left-0 flex flex-col items-center justify-center p-6 z-30 border-r border-gray-200 dark:border-gray-800">
-            
-            <div class="mb-8 relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                <img class="relative w-40 h-40 rounded-full object-cover border-4 border-white dark:border-slate-800" 
-                     src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG" 
-                     alt="Mazen Mohamed Siddig">
+      <h1 class="font-display text-xl md:text-2xl font-bold text-slate-800 dark:text-white text-center mb-2"
+          data-ar="مازن محمد القيصر">MAZEN MOHAMED</h1>
+      <p class="text-[11px] font-bold text-primary tracking-[0.22em] uppercase text-center mb-8 leading-relaxed"
+         data-ar="مهندس تطوير برمجيات متكامل · مطور ذكاء اصطناعي">Full Stack Software Developer · AI Developer</p>
+
+      <ul>
+        <li><a class="nav-link font-display" href="#about" data-ar="نبذة عني">ABOUT</a></li>
+        <li><a class="nav-link font-display" href="#experience" data-ar="الخبرات العملية">EXPERIENCE</a></li>
+        <li><a class="nav-link font-display" href="#education" data-ar="التعليم">EDUCATION</a></li>
+        <li><a class="nav-link font-display" href="#skills" data-ar="المهارات">SKILLS</a></li>
+        <li><a class="nav-link font-display" href="#certificates" data-ar="الشهادات">CERTIFICATES</a></li>
+        <li><a class="nav-link font-display" href="#organizations" data-ar="التطوع والمنظمات">ORGANIZATIONS</a></li>
+        <li><a class="nav-link font-display" href="#projects" data-ar="المشاريع">PROJECTS</a></li>
+        <li><a class="nav-link font-display" href="#publications" data-ar="المؤلفات والكتب">PUBLICATIONS</a></li>
+        <li><a class="nav-link font-display" href="#contact" data-ar="تواصل معي">CONTACT</a></li>
+      </ul>
+
+      <div class="flex gap-3 mt-8">
+        <a href="https://www.facebook.com/mazealqayser/" target="_blank" rel="noopener" aria-label="Facebook"
+           class="w-10 h-10 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#1877F2] hover:text-white hover:-translate-y-1 transition-all shadow-sm"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/" target="_blank" rel="noopener" aria-label="LinkedIn"
+           class="w-10 h-10 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#0A66C2] hover:text-white hover:-translate-y-1 transition-all shadow-sm"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://github.com/mazen-alqayser" target="_blank" rel="noopener" aria-label="GitHub"
+           class="w-10 h-10 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-black hover:text-white hover:-translate-y-1 transition-all shadow-sm"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://wa.me/971553775669" target="_blank" rel="noopener" aria-label="WhatsApp"
+           class="w-10 h-10 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#25D366] hover:text-white hover:-translate-y-1 transition-all shadow-sm"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+
+      <button type="button" class="cv-btn mt-8 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold shadow-lg hover:shadow-blue-500/50 hover:-translate-y-1 transition-all font-display text-sm"
+              data-ar="تحميل السيرة الذاتية">
+        <i class="fa-solid fa-download me-2" aria-hidden="true"></i><span data-ar="تحميل السيرة الذاتية">Download CV</span>
+        <span class="ms-2 text-[10px] font-bold bg-white/20 rounded-full px-2 py-0.5 align-middle">ATS</span>
+      </button>
+    </nav>
+
+    <!-- ═══════════ المحتوى الرئيسي ═══════════ -->
+    <main class="main-col p-5 md:p-12 lg:p-16 min-h-screen">
+
+      <!-- ═══ 01 · ABOUT / HERO ═══ -->
+      <section id="about" class="mb-16 md:mb-24 scroll-mt-28">
+
+        <p class="status-badge mb-5">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-ar="متاح للعمل والمشاريع">Open to work &amp; projects</span>
+        </p>
+
+        <p class="text-primary font-semibold mb-2 tracking-wide" data-ar="أهلاً، أنا">Hello, I'm</p>
+
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-4"
+            data-ar="مازن <span class='text-gradient'>القيصر</span>">
+          MAZEN <span class="text-gradient">ALQAYSER</span>
+        </h1>
+
+        <div class="font-display text-lg md:text-2xl font-bold text-slate-600 dark:text-slate-400 mb-6 min-h-[2.2em]">
+          <span class="text-primary me-2" aria-hidden="true">//</span><span id="typed"></span><span class="caret" aria-hidden="true"></span>
+        </div>
+
+        <p class="max-w-3xl text-base md:text-lg leading-relaxed mb-8"
+           data-ar="أحوّل الأفكار المعقدة إلى منتجات رقمية سريعة وموثوقة — من أنظمة الذكاء الاصطناعي إلى التطبيقات متعددة المنصات. أبني البرمجيات كما تُبنى الجسور: بإتقان، ولتدوم.">
+          I turn complex ideas into fast, reliable digital products — from AI-powered systems to cross-platform apps.
+          I build software the way bridges are built: masterfully, and to last.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-8 text-sm">
+          <a href="mailto:mazen.alqayser@icloud.com"
+             class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl card !transform-none">
+            <i class="fa-solid fa-envelope text-primary" aria-hidden="true"></i>
+            <span dir="ltr" class="font-medium">mazen.alqayser@icloud.com</span>
+          </a>
+          <a href="tel:+971553775669" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl card !transform-none">
+            <i class="fa-solid fa-phone text-primary" aria-hidden="true"></i>
+            <span dir="ltr" class="font-medium">+971 55 377 5669 · +20 112 459 2083</span>
+          </a>
+          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl card !transform-none">
+            <i class="fa-solid fa-earth-americas text-primary" aria-hidden="true"></i>
+            <span class="font-medium" data-ar="عن بُعد · حول العالم">Remote · Worldwide</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 mb-10">
+          <button type="button" class="cv-btn inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:-translate-y-1 hover:shadow-blue-500/50 transition-all">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+            <span data-ar="تحميل السيرة الذاتية — ATS">Download CV — ATS</span>
+          </button>
+          <a href="#contact" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full border-2 border-slate-300 dark:border-slate-600 font-bold text-slate-700 dark:text-slate-200 hover:border-primary hover:text-primary dark:hover:text-primary light: hover:-translate-y-1 transition-all">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            <span data-ar="تواصل معي">Contact Me</span>
+          </a>
+          <div class="flex gap-3 ms-1">
+            <a href="https://www.facebook.com/mazealqayser/" target="_blank" rel="noopener" aria-label="Facebook"
+               class="w-11 h-11 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#1877F2] hover:text-white hover:-translate-y-1 transition-all shadow-md"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/" target="_blank" rel="noopener" aria-label="LinkedIn"
+               class="w-11 h-11 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#0A66C2] hover:text-white hover:-translate-y-1 transition-all shadow-md"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/mazen-alqayser" target="_blank" rel="noopener" aria-label="GitHub"
+               class="w-11 h-11 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-black hover:text-white hover:-translate-y-1 transition-all shadow-md"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- إحصائيات -->
+        <div class="stats-row glass rounded-2xl p-6 shadow-lg max-w-3xl reveal">
+          <div class="stat">
+            <span class="stat-num font-display"><span class="count" data-count="15">0</span>+</span>
+            <span class="stat-label" data-ar="مشروعاً منجزاً">PROJECTS DELIVERED</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num font-display"><span class="count" data-count="25">0</span>+</span>
+            <span class="stat-label" data-ar="شهادة معتمدة">CERTIFICATIONS</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num font-display"><span class="count" data-count="30">0</span>+</span>
+            <span class="stat-label" data-ar="تقنية وأداة">TECHNOLOGIES</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num font-display"><span class="count" data-count="2">0</span></span>
+            <span class="stat-label" data-ar="إصداراً منشوراً">PUBLISHED EDITIONS</span>
+          </div>
+        </div>
+
+        <!-- الملخص المهني -->
+        <div class="glass rounded-2xl p-7 md:p-9 shadow-xl border-s-4 border-primary mt-12 max-w-4xl reveal">
+          <h2 class="font-display text-lg font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-user-astronaut text-primary text-xl" aria-hidden="true"></i>
+            <span data-ar="الملخص المهني">Professional Summary</span>
+          </h2>
+          <p class="text-base md:text-lg leading-relaxed text-justify"
+             data-ar="متخصص في هندسة البرمجيات والذكاء الاصطناعي، أمتلك خبرة واسعة في هندسة البرمجيات الشاملة من البداية للنهاية، والحوسبة السحابية، وتطوير تطبيقات الموبايل. سجلٌّ مهني مثبت في بناء روبوتات المحادثة الذكية، والتطبيقات متعددة المنصات، والأنظمة المؤسسية التي تُعزّز التعاون وتؤتمت سير العمل وتدفع الابتكار. حاصل على شهادات معتمدة من <strong>IBM</strong> (الذكاء الاصطناعي والتطوير المتكامل) و<strong>Meta</strong> (تطوير تطبيقات الموبايل بـ React Native)، مع معرفة عميقة بالذكاء الاصطناعي التوليدي وتعلّم الآلة وأدوات <strong>DevOps</strong> (Docker وKubernetes وCI/CD وأمن السحابة). أتقن قيادة الفرق وتقديم حلول قابلة للتوسّع وتطبيق منهجيات <strong>Agile</strong> و<strong>DevSecOps</strong> لضمان الكفاءة والموثوقية والأمان. لديّ خبرة في التعاون مع المنظمات غير الحكومية والشركات الدولية لبناء منصات تقنية مؤثرة تعالج تحديات العالم الحقيقي.">
+            <strong class="text-primary">AI &amp; Software Development Specialist</strong> with extensive experience in
+            <strong>end-to-end software engineering</strong>, <strong>cloud computing</strong>, and <strong>mobile app
+            development</strong>. Proven track record in building <strong>intelligent chatbots</strong>,
+            <strong>cross-platform applications</strong>, and <strong>enterprise systems</strong> that enhance
+            collaboration, automate workflows, and drive innovation. <strong>Certified by IBM</strong> (AI &amp;
+            Full-Stack Development) and <strong>Meta</strong> (React Native Mobile Development), with deep knowledge in
+            <strong>Generative AI</strong>, <strong>Machine Learning</strong>, and <strong>DevOps</strong> (Docker,
+            Kubernetes, CI/CD, Cloud Security). Skilled in <strong>leading teams</strong>, delivering
+            <strong>scalable solutions</strong>, and applying <strong>Agile</strong> and <strong>DevSecOps</strong>
+            methodologies to ensure efficiency, reliability, and security. Experienced in collaborating with
+            <strong>NGOs</strong> and <strong>international companies</strong> to develop impactful technology platforms
+            that solve real-world challenges.
+          </p>
+          <p class="focus-line mt-6 pt-5 border-t border-dashed flex items-center gap-3 text-sm font-semibold text-slate-600 dark:text-slate-400">
+            <i class="fa-solid fa-bolt text-yellow-500" aria-hidden="true"></i>
+            <span data-ar="أعمل حالياً على: منصات مدعومة بالذكاء الاصطناعي، مواقع رسمية لكُتّاب وفنانين، وأنظمة سحابية حديثة.">
+              Currently engineering: AI-powered platforms, official websites for writers &amp; artists, and cloud-native systems.
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <!-- شريط التقنيات المتحرك -->
+      <div class="marquee glass rounded-2xl py-5 mb-16 md:mb-24 reveal" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span class="marquee-item"><i class="devicon-python-plain colored"></i>Python</span>
+            <span class="marquee-item"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+            <span class="marquee-item"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+            <span class="marquee-item"><i class="devicon-react-original colored"></i>React.js</span>
+            <span class="marquee-item"><i class="devicon-django-plain colored"></i>Django</span>
+            <span class="marquee-item"><i class="devicon-flask-original icon-mono"></i>Flask</span>
+            <span class="marquee-item"><i class="fa-brands fa-aws text-orange-400"></i>AWS</span>
+            <span class="marquee-item"><i class="devicon-docker-plain colored"></i>Docker</span>
+            <span class="marquee-item"><i class="devicon-kubernetes-plain colored"></i>Kubernetes</span>
+            <span class="marquee-item"><i class="devicon-azure-plain colored"></i>Azure</span>
+            <span class="marquee-item"><i class="devicon-android-plain colored"></i>Android</span>
+            <span class="marquee-item"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+            <span class="marquee-item"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
+            <span class="marquee-item"><i class="devicon-firebase-plain colored"></i>Firebase</span>
+            <span class="marquee-item"><i class="devicon-git-plain colored"></i>Git</span>
+            <span class="marquee-item"><i class="devicon-linux-plain colored"></i>Linux</span>
+            <span class="marquee-item"><i class="devicon-wordpress-plain colored"></i>WordPress</span>
+          </div>
+          <div class="marquee-group">
+            <span class="marquee-item"><i class="devicon-python-plain colored"></i>Python</span>
+            <span class="marquee-item"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+            <span class="marquee-item"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+            <span class="marquee-item"><i class="devicon-react-original colored"></i>React.js</span>
+            <span class="marquee-item"><i class="devicon-django-plain colored"></i>Django</span>
+            <span class="marquee-item"><i class="devicon-flask-original icon-mono"></i>Flask</span>
+            <span class="marquee-item"><i class="fa-brands fa-aws text-orange-400"></i>AWS</span>
+            <span class="marquee-item"><i class="devicon-docker-plain colored"></i>Docker</span>
+            <span class="marquee-item"><i class="devicon-kubernetes-plain colored"></i>Kubernetes</span>
+            <span class="marquee-item"><i class="devicon-azure-plain colored"></i>Azure</span>
+            <span class="marquee-item"><i class="devicon-android-plain colored"></i>Android</span>
+            <span class="marquee-item"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+            <span class="marquee-item"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
+            <span class="marquee-item"><i class="devicon-firebase-plain colored"></i>Firebase</span>
+            <span class="marquee-item"><i class="devicon-git-plain colored"></i>Git</span>
+            <span class="marquee-item"><i class="devicon-linux-plain colored"></i>Linux</span>
+            <span class="marquee-item"><i class="devicon-wordpress-plain colored"></i>WordPress</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ 02 · EXPERIENCE ═══ -->
+      <section id="experience" class="mb-16 md:mb-24 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">02</span>
+          <h2 class="sec-title font-display" data-ar="الخبرات العملية">Experience</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+        <p class="sec-sub reveal" data-ar="أبرز الشخصيات والجهات التي بنيتُ لها حلولاً رقمية">Key personalities and organizations I build digital solutions for</p>
+
+        <div class="timeline" data-stagger>
+
+          <!-- داليا الياس -->
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card p-6">
+              <div class="flex flex-col md:flex-row md:items-center gap-4 mb-3">
+                <div class="tl-icon tl-icon-blue"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg md:text-xl font-bold text-slate-800 dark:text-white leading-snug"
+                      data-ar="إدارة وبناء الموقع الإلكتروني الرسمي">Official Website — Management &amp; Development</h3>
+                  <p class="text-sm font-semibold text-primary mt-0.5"
+                     data-ar="الكاتبة والشاعرة داليا الياس">Dalia Al-Yas · Writer &amp; Poet</p>
+                </div>
+                <span class="tl-tag" data-ar="موقع رسمي">Official Website</span>
+              </div>
+              <ul class="tl-points">
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="إدارة وتصميم وبناء الموقع الإلكتروني الرسمي للكاتبة والشاعرة داليا الياس — استراتيجية المحتوى والهوية الرقمية والتطوير المتكامل.">
+                    Managing, designing, and building the official website of the writer and poet Dalia Al-Yas — content strategy, digital branding, and full-stack development.</span></li>
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="تقديم حضور رقمي سريع وأنيق يعكس هويتها الأدبية ويوسّع قاعدة قرّائها حول العالم.">
+                    Delivering a fast, elegant digital presence that mirrors her literary identity and expands her global readership.</span></li>
+              </ul>
+              <div class="tl-meta"><span>Web Management</span><span>Full-Stack</span><span>Branding</span></div>
             </div>
+          </article>
 
-            <h1 class="text-2xl font-bold text-slate-800 dark:text-white font-tech text-center mb-1">MAZEN MOHAMED</h1>
-            <p class="text-sm font-semibold text-primary mb-8 tracking-widest uppercase">IT Engineer & AI Dev</p>
+          <!-- حمادة بشير -->
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card p-6">
+              <div class="flex flex-col md:flex-row md:items-center gap-4 mb-3">
+                <div class="tl-icon tl-icon-amber"><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg md:text-xl font-bold text-slate-800 dark:text-white leading-snug"
+                      data-ar="تطوير تطبيق الويب الرسمي">Official Web Application — Development</h3>
+                  <p class="text-sm font-semibold text-amber-500 mt-0.5"
+                     data-ar="النجم والفنان حمادة بشير">Hamada Bashir · Star &amp; Artist</p>
+                </div>
+                <span class="tl-tag" data-ar="تطبيق ويب">Web App</span>
+              </div>
+              <ul class="tl-points">
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="تطوير تطبيق الويب الرسمي للنجم والفنان حمادة بشير — منصة رقمية تفاعلية تصل فنّه بجمهوره أينما كانوا.">
+                    Developing the official web application for the star and artist Hamada Bashir — an interactive digital hub connecting his art with his audience.</span></li>
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="بناء منصة عصرية عالية الأداء تجمع الأخبار والوسائط وتفاعل المعجبين في تجربة واحدة سلسة.">
+                    Building a modern, high-performance platform that brings together news, media, and fan engagement in one seamless experience.</span></li>
+              </ul>
+              <div class="tl-meta"><span>Web App</span><span>Interactive</span><span>Media</span></div>
+            </div>
+          </article>
 
-            <ul class="flex flex-col space-y-4 w-full text-center">
-                <li><a class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all font-tech tracking-wide text-sm" href="#about">ABOUT</a></li>
-                <li><a class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all font-tech tracking-wide text-sm" href="#education">EDUCATION</a></li>
-                <li><a class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all font-tech tracking-wide text-sm" href="#skills">SKILLS</a></li>
-                <li><a class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all font-tech tracking-wide text-sm" href="#certificates">CERTIFICATES</a></li>
-                <li><a class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all font-tech tracking-wide text-sm" href="#organizations">ORGANIZATIONS</a></li>
-                <li><a class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all font-tech tracking-wide text-sm" href="#projects">PROJECTS</a></li>
+          <!-- تير ديز هوم -->
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card p-6">
+              <div class="flex flex-col md:flex-row md:items-center gap-4 mb-3">
+                <div class="tl-icon tl-icon-green"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg md:text-xl font-bold text-slate-800 dark:text-white leading-snug"
+                      data-ar="مطوّر مساعد ذكي ومدرب متطوع">AI Chatbot Developer &amp; Volunteer Instructor</h3>
+                  <p class="text-sm font-semibold text-green-600 dark:text-green-400 mt-0.5">Terre des Hommes · International NGO</p>
+                </div>
+                <span class="tl-tag" data-ar="منصة مجتمعية">Community Platform</span>
+              </div>
+              <ul class="tl-points">
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="تطوير مساعد محادثة ذكي للمنصة المجتمعية الخاصة بالمنظمة، بأتمتة الدعم وتحسين تفاعل المستفيدين.">
+                    Developed an AI-powered chatbot assistant for the organization's community platform, automating support and improving beneficiary engagement.</span></li>
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="التطوع كمدرب لشهادة ICDL لتمكين الشباب من المهارات الرقمية الأساسية.">
+                    Volunteered as an ICDL course instructor, empowering youth with essential digital skills.</span></li>
+              </ul>
+              <div class="tl-meta"><span>AI</span><span>Python</span><span>EdTech</span></div>
+            </div>
+          </article>
+
+          <!-- شركة الذهب -->
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card p-6">
+              <div class="flex flex-col md:flex-row md:items-center gap-4 mb-3">
+                <div class="tl-icon tl-icon-gold"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg md:text-xl font-bold text-slate-800 dark:text-white leading-snug" data-ar="مشرف">Supervisor</h3>
+                  <p class="text-sm font-semibold text-yellow-600 dark:text-yellow-400 mt-0.5" data-ar="شركة الذهب — Aldahab Company">Aldahab Company</p>
+                </div>
+                <span class="tl-tag" data-ar="عمليات">Operations</span>
+              </div>
+              <ul class="tl-points">
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="الإشراف على العمليات اليومية وتنسيق أنشطة الفريق، ما رسّخ مهارات القيادة والتخطيط وحل المشكلات تحت الضغط.">
+                    Supervised daily operations and coordinated team activities, strengthening leadership, planning, and problem-solving skills under pressure.</span></li>
+              </ul>
+              <div class="tl-meta"><span>Leadership</span><span>Coordination</span></div>
+            </div>
+          </article>
+
+          <!-- أعمال مستقلة -->
+          <article class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card p-6">
+              <div class="flex flex-col md:flex-row md:items-center gap-4 mb-3">
+                <div class="tl-icon tl-icon-violet"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg md:text-xl font-bold text-slate-800 dark:text-white leading-snug"
+                      data-ar="مطوّر مستقل — برمجيات متكاملة وذكاء اصطناعي">Independent Full-Stack &amp; AI Developer</h3>
+                  <p class="text-sm font-semibold text-violet-500 mt-0.5" data-ar="عمل حر / عن بُعد">Freelance · Remote</p>
+                </div>
+                <span class="tl-tag" data-ar="عمل حر">Freelance</span>
+              </div>
+              <ul class="tl-points">
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="تسليم أكثر من 15 منتجاً برمجياً لعملاء ومشاريع خاصة: أنظمة ERP وLMS، متاجر إلكترونية، تطبيقات موبايل، وحلول ذكاء اصطناعي.">
+                    Delivered 15+ software products for clients and personal ventures: ERP and LMS systems, e-commerce stores, mobile apps, and AI solutions.</span></li>
+                <li><i class="fa-solid fa-angle-right rtl-flip" aria-hidden="true"></i>
+                  <span data-ar="إدارة دورة حياة المنتج كاملة — من المتطلبات والمعمارية إلى التطوير والنشر والصيانة.">
+                    Owned the full product lifecycle — requirements, architecture, development, deployment, and maintenance.</span></li>
+              </ul>
+              <div class="tl-meta"><span>ERP / LMS</span><span>E-commerce</span><span>Mobile</span><span>AI</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══ 03 · EDUCATION ═══ -->
+      <section id="education" class="mb-16 md:mb-24 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">03</span>
+          <h2 class="sec-title font-display" data-ar="التعليم">Education</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6" data-stagger>
+          <article class="card p-6 flex gap-4 items-start reveal">
+            <div class="tl-icon tl-icon-blue shrink-0"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-800 dark:text-white leading-snug"
+                  data-ar="بكالوريوس تقنية المعلومات (مع مرتبة الشرف)">Bachelor of Information Technology (Honours)</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1" data-ar="جامعة المستقبل">Future University</p>
+              <span class="pub-badge inline-block mt-3 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300" data-ar="درجة علمية">Degree</span>
+            </div>
+          </article>
+
+          <article class="card p-6 flex gap-4 items-start reveal">
+            <div class="tl-icon tl-icon-violet shrink-0"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-800 dark:text-white leading-snug"
+                  data-ar="الشهادة المهنية في تطوير الذكاء الاصطناعي">Professional Certificate in Artificial Intelligence Development</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">IBM</p>
+              <span class="pub-badge inline-block mt-3 bg-violet-100 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300" data-ar="شهادة مهنية">Professional</span>
+            </div>
+          </article>
+
+          <article class="card p-6 flex gap-4 items-start reveal">
+            <div class="tl-icon tl-icon-blue shrink-0"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-800 dark:text-white leading-snug"
+                  data-ar="الشهادة المهنية في تطوير البرمجيات المتكاملة (Full-Stack)">Full-Stack Software Developer Professional Certification</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">IBM</p>
+              <span class="pub-badge inline-block mt-3 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300" data-ar="شهادة مهنية">Professional</span>
+            </div>
+          </article>
+
+          <article class="card p-6 flex gap-4 items-start reveal">
+            <div class="tl-icon tl-icon-amber shrink-0"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-800 dark:text-white leading-snug"
+                  data-ar="شهادة Meta في تطوير تطبيقات الموبايل (React Native)">Meta React Native Mobile Developer Certification</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Meta</p>
+              <span class="pub-badge inline-block mt-3 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300" data-ar="شهادة مهنية">Professional</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══ 04 · SKILLS ═══ -->
+      <section id="skills" class="mb-16 md:mb-24 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">04</span>
+          <h2 class="sec-title font-display" data-ar="الترسانة التقنية">Technical Arsenal</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6" data-stagger>
+
+          <article class="glass rounded-2xl p-6 reveal">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-code text-secondary text-xl" aria-hidden="true"></i><span data-ar="البرمجة والتطوير">Programming &amp; Development</span></h3>
+            <div class="tech-icons mb-4">
+              <i class="devicon-python-plain colored" title="Python" aria-hidden="true"></i>
+              <i class="devicon-javascript-plain colored" title="JavaScript" aria-hidden="true"></i>
+              <i class="devicon-nodejs-plain colored" title="Node.js" aria-hidden="true"></i>
+              <i class="devicon-php-plain colored" title="PHP" aria-hidden="true"></i>
+              <i class="devicon-html5-plain colored" title="HTML5" aria-hidden="true"></i>
+              <i class="devicon-css3-plain colored" title="CSS3" aria-hidden="true"></i>
+              <i class="devicon-mysql-plain colored" title="SQL" aria-hidden="true"></i>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400" dir="ltr" data-ar="Python، JavaScript، Node.js، PHP، HTML، CSS، SQL">Python, JavaScript, Node.js, PHP, HTML, CSS, SQL</p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 border-t-2 !border-t-primary reveal">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-brain text-primary text-xl" aria-hidden="true"></i><span data-ar="الذكاء الاصطناعي">AI &amp; Intelligence</span></h3>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex gap-2.5"><i class="fa-solid fa-circle-check text-primary mt-0.5 text-[.8rem]" aria-hidden="true"></i>
+                <span><strong class="text-slate-800 dark:text-slate-200" data-ar="الذكاء الاصطناعي التوليدي والنماذج اللغوية الكبيرة">Generative AI &amp; LLMs</strong> <span data-ar="(ChatGPT، OpenAI)">(ChatGPT, OpenAI)</span></span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-circle-check text-primary mt-0.5 text-[.8rem]" aria-hidden="true"></i>
+                <span data-ar="تعلّم الآلة، التعلم العميق، ومعالجة اللغات الطبيعية (NLP)">Machine Learning, Deep Learning, NLP</span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-circle-check text-primary mt-0.5 text-[.8rem]" aria-hidden="true"></i>
+                <span data-ar="التحليلات التنبؤية والتعلّم الموجّه">Predictive Analytics &amp; Supervised Learning</span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-circle-check text-primary mt-0.5 text-[.8rem]" aria-hidden="true"></i>
+                <span data-ar="هندسة الأوامر وتطبيقات الذكاء الاصطناعي">Prompt Engineering &amp; AI Applications</span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-circle-check text-primary mt-0.5 text-[.8rem]" aria-hidden="true"></i>
+                <span data-ar="بناء روبوتات محادثة احترافية">Building professional AI chatbots</span></li>
             </ul>
+          </article>
 
-            <a href="https://github.com/mazen-alqayser/mazenalqaysercv/raw/main/MAZEN%20ALQAYSER%20IT%20ENGINEERING%20-%20AI%20DEVELOPER%20(1)%20(3)%20(1).pdf" 
-               class="mt-8 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold shadow-lg hover:shadow-blue-500/50 transition-all transform hover:-translate-y-1 font-tech text-sm" download>
-               <i class="fas fa-download mr-2"></i> PDF VERSION
+          <article class="glass rounded-2xl p-6 reveal">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-globe text-green-500 text-xl" aria-hidden="true"></i><span data-ar="تطوير الويب">Web Development</span></h3>
+            <div class="tech-icons mb-4">
+              <i class="devicon-react-original colored" title="React" aria-hidden="true"></i>
+              <i class="devicon-django-plain colored" title="Django" aria-hidden="true"></i>
+              <i class="devicon-flask-original icon-mono" title="Flask" aria-hidden="true"></i>
+              <i class="devicon-wordpress-plain colored" title="WordPress" aria-hidden="true"></i>
+              <i class="devicon-bootstrap-plain colored" title="Bootstrap" aria-hidden="true"></i>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400" dir="ltr" data-ar="React.js، Redux، Django، Flask، WordPress، واجهات RESTful، Bootstrap">React.js, Redux, Django, Flask, WordPress, RESTful APIs, Bootstrap</p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 reveal">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-cloud text-sky-400 text-xl" aria-hidden="true"></i><span data-ar="السحابة و DevOps">Cloud &amp; DevOps</span></h3>
+            <div class="tech-icons mb-4">
+              <i class="devicon-docker-plain colored" title="Docker" aria-hidden="true"></i>
+              <i class="devicon-kubernetes-plain colored" title="Kubernetes" aria-hidden="true"></i>
+              <i class="fa-brands fa-aws text-orange-400" title="AWS" aria-hidden="true"></i>
+              <i class="devicon-azure-plain colored" title="Azure" aria-hidden="true"></i>
+              <i class="devicon-linux-plain colored" title="Linux" aria-hidden="true"></i>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400" dir="ltr" data-ar="Docker، Kubernetes، AWS، Azure، CI/CD، DevSecOps، Linux">Docker, Kubernetes (K8s), AWS, Azure, CI/CD, DevSecOps, Linux</p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 reveal">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-mobile-screen-button text-purple-500 text-xl" aria-hidden="true"></i><span data-ar="تطوير الموبايل">Mobile Development</span></h3>
+            <div class="tech-icons mb-4">
+              <i class="devicon-react-original colored" title="React Native" aria-hidden="true"></i>
+              <i class="devicon-android-plain colored" title="Android" aria-hidden="true"></i>
+              <i class="devicon-swift-plain colored" title="iOS" aria-hidden="true"></i>
+              <i class="devicon-kotlin-plain colored" title="Kotlin" aria-hidden="true"></i>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400" dir="ltr" data-ar="React Native، أندرويد، iOS، تطبيقات متعددة المنصات">React Native, Android, iOS, Cross-platform Apps</p>
+          </article>
+
+          <article class="glass rounded-2xl p-6 reveal">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-database text-yellow-500 text-xl" aria-hidden="true"></i><span data-ar="قواعد البيانات">Database Management</span></h3>
+            <div class="tech-icons mb-4">
+              <i class="devicon-mysql-plain colored" title="MySQL" aria-hidden="true"></i>
+              <i class="devicon-postgresql-plain colored" title="PostgreSQL" aria-hidden="true"></i>
+              <i class="devicon-mongodb-plain colored" title="MongoDB" aria-hidden="true"></i>
+              <i class="devicon-firebase-plain colored" title="Firebase" aria-hidden="true"></i>
+              <i class="devicon-sqlite-plain colored" title="SQLite" aria-hidden="true"></i>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400" dir="ltr" data-ar="SQL، NoSQL، Firebase، Supabase، PostgreSQL، SQLite، ORM">SQL, NoSQL, Firebase, Supabase, PostgreSQL, SQLite, ORM</p>
+          </article>
+        </div>
+
+        <!-- مهارات إضافية ومهنية -->
+        <div class="mt-14 space-y-10 reveal">
+          <h3 class="text-xl md:text-2xl font-bold font-display text-slate-800 dark:text-white flex items-center gap-3 pb-4 border-b" style="border-color: var(--line);">
+            <i class="fa-solid fa-gears text-primary" aria-hidden="true"></i>
+            <span data-ar="مهارات مهنية وإضافية">Professional &amp; Additional Skills</span>
+          </h3>
+
+          <div>
+            <h4 class="skill-group-title" data-ar="الشبكات وتقنية المعلومات">Networking &amp; IT</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="tag" data-ar="وصول عن بُعد">Remote Access</span>
+              <span class="tag" data-ar="CCNA (أساسيات)">CCNA (Beginner)</span>
+              <span class="tag">ICDL</span>
+              <span class="tag" data-ar="إدارة الشبكات">Network Administration</span>
+              <span class="tag" data-ar="سطر الأوامر">CLI</span>
+              <span class="tag" data-ar="أوامر Linux">Linux Commands</span>
+              <span class="tag" data-ar="إدارة الملفات">File Management</span>
+              <span class="tag" data-ar="البيئات الافتراضية">Virtual Environments</span>
+              <span class="tag" data-ar="أنظمة التشغيل وبيئات التطوير">OS &amp; IDEs</span>
+              <span class="tag" data-ar="التوثيق الفني">Documentation</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="skill-group-title" data-ar="العمل الجماعي وهندسة الجودة">Teamwork &amp; Engineering Practices</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="tag tag-hot">Git</span>
+              <span class="tag tag-hot">GitHub</span>
+              <span class="tag">GitLab</span>
+              <span class="tag">Bitbucket</span>
+              <span class="tag" data-ar="إدارة الإصدارات">Version Control</span>
+              <span class="tag">WordPress</span>
+              <span class="tag" data-ar="التعاون">Collaboration</span>
+              <span class="tag" data-ar="الإبداع">Creativity</span>
+              <span class="tag" data-ar="التفكير النقدي">Critical Thinking</span>
+              <span class="tag" data-ar="مراجعة الكود">Code Review</span>
+              <span class="tag" data-ar="اختبار البرمجيات">Software Testing</span>
+              <span class="tag" data-ar="ضمان الجودة">QA</span>
+              <span class="tag" data-ar="اختبارات الوحدة">Unit Testing</span>
+              <span class="tag">Jest</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="skill-group-title" data-ar="المهارات المهنية">Professional Skills</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="tag" data-ar="التواصل">Communication</span>
+              <span class="tag" data-ar="العرض والتقديم">Presentation</span>
+              <span class="tag" data-ar="التفاوض">Negotiation</span>
+              <span class="tag" data-ar="إدارة المشاريع الرشيقة">Agile Project Management</span>
+              <span class="tag" data-ar="التطوير المؤسسي">Organizational Development</span>
+              <span class="tag" data-ar="إدارة دورة حياة التطبيقات">Application Lifecycle Management</span>
+              <span class="tag" data-ar="بناء الشبكات المهنية">Professional Networking (LinkedIn)</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="skill-group-title" data-ar="نماذج دورة حياة البرمجيات">SDLC Models</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="tag" data-ar="الشلال">Waterfall</span>
+              <span class="tag tag-hot">Agile</span>
+              <span class="tag">V-Model</span>
+              <span class="tag" data-ar="النموذج التكراري">Iterative</span>
+              <span class="tag" data-ar="النموذج الحلزوني">Spiral</span>
+              <span class="tag" data-ar="نموذج الانفجار الكبير">Big Bang</span>
+              <span class="tag tag-hot">DevOps</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 05 · CERTIFICATES ═══ -->
+      <section id="certificates" class="mb-16 md:mb-24 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">05</span>
+          <h2 class="sec-title font-display" data-ar="الشهادات والشارات">Certifications &amp; Badges</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-10 mb-10 reveal" data-stagger>
+          <a href="https://www.credly.com/badges/47809561-0931-433e-b094-cc29df7a7655" target="_blank" rel="noopener" class="group flex flex-col items-center gap-2 reveal">
+            <div class="badge-circle"><img src="https://images.credly.com/size/680x680/images/70675aed-31be-4c30-add7-b99905a34005/image.png" class="w-16 h-16 object-contain" width="64" height="64" loading="lazy" alt="IBM AI Developer badge"></div>
+            <span class="text-xs font-bold font-display text-primary">IBM AI Dev</span>
+          </a>
+          <a href="https://www.credly.com/badges/ffa6789f-1e20-465b-bd76-d41934653ad4" target="_blank" rel="noopener" class="group flex flex-col items-center gap-2 reveal">
+            <div class="badge-circle" style="box-shadow: 0 0 22px -6px rgba(249,115,22,.5);"><img src="https://images.credly.com/size/680x680/images/e747147a-9300-4795-8b38-704a133bed88/Coursera_20Front_20end_20Development_20with_20React_20V2.png" class="w-16 h-16 object-contain" width="64" height="64" loading="lazy" alt="React Developer badge"></div>
+            <span class="text-xs font-bold font-display text-orange-500">React Dev</span>
+          </a>
+          <a href="https://www.credly.com/badges/faddf893-03ee-4356-becd-72acd4efb98b" target="_blank" rel="noopener" class="group flex flex-col items-center gap-2 reveal">
+            <div class="badge-circle" style="box-shadow: 0 0 22px -6px rgba(168,85,247,.5);"><img src="https://images.credly.com/size/680x680/images/17add978-0cea-40e8-8832-9492fc7c260b/Coursera_20Full_20Stack_20Software_20Developer_20Prof_20Cert_20V5.png" class="w-16 h-16 object-contain" width="64" height="64" loading="lazy" alt="IBM Full-Stack Developer badge"></div>
+            <span class="text-xs font-bold font-display text-purple-500">IBM Full Stack</span>
+          </a>
+        </div>
+
+        <div class="card p-7 md:p-8 border-s-4 !border-s-secondary reveal">
+          <ul class="grid md:grid-cols-2 gap-x-8 gap-y-5">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-green-500 mt-1" aria-hidden="true"></i>
+              <div><strong class="block text-slate-800 dark:text-white" data-ar="مطوّر متكامل معتمد من IBM">IBM Full-Stack Developer</strong>
+              <span class="text-sm text-slate-500 dark:text-slate-400" data-ar="15 شهادة فرعية | IBM">15 Certificates | IBM</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-green-500 mt-1" aria-hidden="true"></i>
+              <div><strong class="block text-slate-800 dark:text-white" data-ar="مطوّر ذكاء اصطناعي معتمد من IBM">IBM AI Developer</strong>
+              <span class="text-sm text-slate-500 dark:text-slate-400" data-ar="10 شهادات فرعية | IBM">10 Certificates | IBM</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-green-500 mt-1" aria-hidden="true"></i>
+              <div><strong class="block text-slate-800 dark:text-white" data-ar="مطوّر React Native وتطبيقات الموبايل">React Native &amp; Mobile Developer</strong>
+              <span class="text-sm text-slate-500 dark:text-slate-400">Meta</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-green-500 mt-1" aria-hidden="true"></i>
+              <div><strong class="block text-slate-800 dark:text-white" data-ar="خبرة إشرافية">Supervisor Experience</strong>
+              <span class="text-sm text-slate-500 dark:text-slate-400" data-ar="شركة الذهب — Aldahab Company">Aldahab Company</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-green-500 mt-1" aria-hidden="true"></i>
+              <div><strong class="block text-slate-800 dark:text-white" data-ar="بناء تطبيق موبايل عبر Google Sheets">Build a Mobile App with Google Sheets</strong>
+              <span class="text-sm text-slate-500 dark:text-slate-400" data-ar="Glide (بدون برمجة)">Glide (No-Code)</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-green-500 mt-1" aria-hidden="true"></i>
+              <div><strong class="block text-slate-800 dark:text-white" data-ar="الدفاع عن الكرامة والأمن الرقمي">Defending Dignity &amp; Digital Security</strong>
+              <span class="text-sm text-slate-500 dark:text-slate-400" data-ar="منظمة العفو الدولية">Amnesty International</span></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-green-500 mt-1" aria-hidden="true"></i>
+              <div><strong class="block text-slate-800 dark:text-white" data-ar="مطوّر برمجيات">Software Developer</strong>
+              <span class="text-sm text-slate-500 dark:text-slate-400">IBM</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ═══ 06 · ORGANIZATIONS ═══ -->
+      <section id="organizations" class="mb-16 md:mb-24 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">06</span>
+          <h2 class="sec-title font-display" data-ar="التطوع والمنظمات">Organizations</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6" data-stagger>
+          <article class="card p-6 border-t-4 !border-t-red-500 reveal">
+            <i class="fa-solid fa-hand-holding-heart text-red-500 text-2xl mb-3" aria-hidden="true"></i>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-1">Terre des Hommes</h3>
+            <p class="text-sm font-semibold text-primary mb-2" data-ar="متطوع — مدرب شهادة ICDL">Volunteer — ICDL Course Instructor</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400" data-ar="تمكين الشباب من مهارات الحاسوب الأساسية عبر التدريب الميداني.">Empowering youth with essential computing skills through hands-on training.</p>
+          </article>
+
+          <article class="card p-6 border-t-4 !border-t-blue-500 reveal">
+            <i class="fa-solid fa-seedling text-blue-500 text-2xl mb-3" aria-hidden="true"></i>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-1" data-ar="سمارات">Samarat</h3>
+            <p class="text-sm font-semibold text-primary mb-2" data-ar="متطوع">Volunteer</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400" data-ar="مشاركة في مبادرات مجتمعية وتطوعية متنوعة.">Contributing to diverse community initiatives and volunteer programs.</p>
+          </article>
+
+          <article class="card p-6 border-t-4 !border-t-amber-500 reveal">
+            <i class="fa-solid fa-shield-halved text-amber-500 text-2xl mb-3" aria-hidden="true"></i>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-1">Amnesty International</h3>
+            <p class="text-sm font-semibold text-primary mb-2" data-ar="متدرب — الأمن الرقمي">Trainee — Digital Security</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400" data-ar="برنامج الدفاع عن الكرامة والأمن الرقمي المعتمد من المنظمة.">Certified Defending Dignity &amp; Digital Security program.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══ 07 · PROJECTS ═══ -->
+      <section id="projects" class="mb-16 md:mb-24 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">07</span>
+          <h2 class="sec-title font-display" data-ar="المشاريع المختارة">Featured Projects</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger>
+
+          <article class="card overflow-hidden group reveal">
+            <div class="h-2 bg-gradient-to-r from-blue-500 to-purple-500" aria-hidden="true"></div>
+            <div class="p-6">
+              <i class="fa-solid fa-robot text-primary text-2xl mb-3 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+              <h3 class="text-lg font-bold mb-1.5 text-slate-800 dark:text-white group-hover:text-primary transition-colors" data-ar="مساعد المحادثة الذكي">AI Chatbot Assistant</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-4" data-ar="منصة تير ديز هوم المجتمعية">Terre des Hommes Community Platform</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag tag-hot">AI</span><span class="tag">Python</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden group reveal">
+            <div class="h-2 bg-gradient-to-r from-green-400 to-blue-500" aria-hidden="true"></div>
+            <div class="p-6">
+              <i class="fa-solid fa-chart-pie text-green-500 text-2xl mb-3 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+              <h3 class="text-lg font-bold mb-1.5 text-slate-800 dark:text-white group-hover:text-primary transition-colors" data-ar="نظام VEES لإدارة الموارد">VEES ERP System</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-4" data-ar="نظام ERP متكامل">Full ERP System</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag" data-ar="مالية">Finance</span><span class="tag" data-ar="قواعد بيانات">Database</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden group reveal">
+            <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500" aria-hidden="true"></div>
+            <div class="p-6">
+              <i class="fa-solid fa-bolt text-purple-500 text-2xl mb-3 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+              <h3 class="text-lg font-bold mb-1.5 text-slate-800 dark:text-white group-hover:text-primary transition-colors" data-ar="تطبيق Work Hub">Work Hub App</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-4" data-ar="أداة إنتاجية">Productivity Tool</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag" data-ar="موبايل">Mobile</span><span class="tag tag-hot">React Native</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden group reveal">
+            <div class="h-2 bg-gradient-to-r from-emerald-500 to-teal-500" aria-hidden="true"></div>
+            <div class="p-6">
+              <i class="fa-solid fa-graduation-cap text-emerald-500 text-2xl mb-3 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+              <h3 class="text-lg font-bold mb-1.5 text-slate-800 dark:text-white group-hover:text-primary transition-colors" data-ar="نظام VEES للتعلم الإلكتروني">VEES LMS System</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-4" data-ar="نظام LMS متكامل">Full LMS System</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag" data-ar="تعليم إلكتروني">E-learning</span><span class="tag" data-ar="قواعد بيانات">Database</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-6 card p-6 reveal" style="border-style: dashed;">
+          <h4 class="font-bold mb-3 text-slate-800 dark:text-white" data-ar="مشاريع أخرى مختارة:">Other Notable Projects:</h4>
+          <ul class="grid sm:grid-cols-2 gap-2.5 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex gap-2.5"><i class="fa-solid fa-angle-right rtl-flip text-primary mt-0.5" aria-hidden="true"></i>
+              <span data-ar="تطبيق شبكات اجتماعية (مشروع خاص)">Social Media App (Own Project)</span></li>
+            <li class="flex gap-2.5"><i class="fa-solid fa-angle-right rtl-flip text-primary mt-0.5" aria-hidden="true"></i>
+              <span data-ar="نظام حجز تذاكر الطيران (مشروع جامعي)">Air-Ticket Reservation System (University)</span></li>
+            <li class="flex gap-2.5"><i class="fa-solid fa-angle-right rtl-flip text-primary mt-0.5" aria-hidden="true"></i>
+              <span data-ar="متاجر إلكترونية (تجارة إلكترونية)">Online Stores (E-commerce)</span></li>
+            <li class="flex gap-2.5"><i class="fa-solid fa-angle-right rtl-flip text-primary mt-0.5" aria-hidden="true"></i>
+              <span data-ar="+10 مشاريع برمجية أخرى">+10 Other Software Projects</span></li>
+          </ul>
+          <a href="https://github.com/mazen-alqayser" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2.5 mt-5 px-6 py-2.5 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-bold hover:border-primary hover:text-primary transition-all">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span data-ar="استكشف المزيد على GitHub">Explore more on GitHub</span>
+            <i class="fa-solid fa-arrow-right rtl-flip text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- ═══ 08 · PUBLICATIONS ═══ -->
+      <section id="publications" class="mb-16 md:mb-24 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">08</span>
+          <h2 class="sec-title font-display" data-ar="المؤلفات والكتب">Featured Publications</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+        <p class="sec-sub reveal" data-ar="إصدار ثنائي اللغة — رؤية تقنية لنهضة وطن">A bilingual release — a technical vision for a nation's revival</p>
+
+        <div class="grid md:grid-cols-2 gap-8" data-stagger>
+
+          <!-- الإصدار الإنجليزي -->
+          <article dir="ltr" class="card overflow-hidden group reveal">
+            <div class="h-2 bg-gradient-to-r from-blue-600 to-emerald-500" aria-hidden="true"></div>
+            <div class="p-7 md:p-8">
+              <div class="flex justify-between items-start mb-4">
+                <span class="pub-badge bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">Strategic Plan</span>
+                <i class="fa-solid fa-book-open text-blue-500 text-xl" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl md:text-2xl font-bold mb-3 leading-snug text-slate-800 dark:text-white group-hover:text-primary transition-colors">
+                Strategic Plan to Save Sudan: Digital Transformation &amp; Anti-Corruption via AI
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                A comprehensive roadmap leveraging artificial intelligence to rebuild national infrastructure, ensure
+                transparency, and automate anti-corruption frameworks for a sustainable future.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tag">Artificial Intelligence</span><span class="tag">GovTech</span><span class="tag">Digital Policy</span>
+              </div>
+              <!-- ضع رابط النسخة الإنجليزية في SITE.bookLinks.en داخل السكربت -->
+              <a href="#" class="book-link inline-flex items-center gap-2 text-primary font-bold hover:underline" data-book="en">
+                Read More <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- الإصدار العربي -->
+          <article dir="rtl" class="card overflow-hidden group reveal">
+            <div class="h-2 bg-gradient-to-r from-emerald-500 to-blue-600" aria-hidden="true"></div>
+            <div class="p-7 md:p-8">
+              <div class="flex justify-between items-start mb-4">
+                <span class="pub-badge bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">خطة استراتيجية</span>
+                <i class="fa-solid fa-book text-emerald-500 text-xl" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl md:text-2xl font-bold mb-3 leading-snug text-slate-800 dark:text-white group-hover:text-primary transition-colors" style="font-family:'Cairo','Tajawal',sans-serif;">
+                الخطة الاستراتيجية لإنقاذ السودان: التحول الرقمي ومكافحة الفساد بالذكاء الاصطناعي
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed" style="font-family:'Tajawal',sans-serif;">
+                رؤية استشرافية توظّف تقنيات الذكاء الاصطناعي لإعادة بناء مؤسسات الدولة، تعزيز الشفافية، ووضع حلول تقنية جذرية لمكافحة الفساد المالي والإداري.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tag">الذكاء الاصطناعي</span><span class="tag">التحول الرقمي</span><span class="tag">الحوكمة</span>
+              </div>
+              <!-- ضع رابط النسخة العربية في SITE.bookLinks.ar داخل السكربت -->
+              <a href="#" class="book-link inline-flex items-center gap-2 text-primary font-bold hover:underline" data-book="ar" style="font-family:'Tajawal',sans-serif;">
+                اقرأ المزيد <i class="fa-solid fa-arrow-left text-sm" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- الأهداف الرئيسية -->
+          <div class="md:col-span-2 card p-7 md:p-8 reveal" style="border-style: dashed;">
+            <h4 class="font-bold text-lg mb-6 text-slate-800 dark:text-white pb-3 border-b flex items-center gap-2.5" style="border-color: var(--line);">
+              <i class="fa-solid fa-bullseye text-primary" aria-hidden="true"></i>
+              Key Objectives · الأهداف الرئيسية
+            </h4>
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+              <ul dir="ltr" class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-database text-blue-500 mt-0.5" aria-hidden="true"></i><span>Building a Unified National Data Center.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-microchip text-blue-500 mt-0.5" aria-hidden="true"></i><span>AI-Powered Audit Systems to track public funds.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-shield-halved text-blue-500 mt-0.5" aria-hidden="true"></i><span>Establishing the National Cyber Warfare Department.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-user-shield text-blue-500 mt-0.5" aria-hidden="true"></i><span>Enhancing National Security via AI analysis.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-gavel text-blue-500 mt-0.5" aria-hidden="true"></i><span>Automating Anti-Corruption frameworks.</span></li>
+              </ul>
+              <ul dir="rtl" class="space-y-3 text-sm text-slate-600 dark:text-slate-400" style="font-family:'Tajawal',sans-serif;">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-database text-emerald-500 mt-0.5" aria-hidden="true"></i><span>بناء مركز بيانات وطني موحّد.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-microchip text-emerald-500 mt-0.5" aria-hidden="true"></i><span>أنظمة تدقيق ذكية لتتبّع الأموال العامة.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-shield-halved text-emerald-500 mt-0.5" aria-hidden="true"></i><span>تأسيس دائرة الحرب الإلكترونية والأمن السيبراني.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-user-shield text-emerald-500 mt-0.5" aria-hidden="true"></i><span>تعزيز الأمن القومي عبر التحليل الاستباقي.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-gavel text-emerald-500 mt-0.5" aria-hidden="true"></i><span>أتمتة منظومة مكافحة الفساد في الدولة.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 09 · CONTACT ═══ -->
+      <section id="contact" class="mb-16 scroll-mt-28">
+        <div class="sec-head reveal">
+          <span class="sec-num font-display">09</span>
+          <h2 class="sec-title font-display" data-ar="تواصل معي">Contact</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+
+        <p class="sec-sub reveal" data-ar="لديك فكرة مشروع، أو تحتاج مهندساً يُنجز بجدية؟ بريدي مفتوح دائماً — عادةً أردّ خلال 24 ساعة.">
+          Have a project in mind, or need an engineer who ships? My inbox is always open — I usually reply within 24 hours.</p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10" data-stagger>
+          <a href="mailto:mazen.alqayser@icloud.com" class="card p-6 block reveal">
+            <i class="fa-solid fa-envelope text-primary text-2xl mb-3" aria-hidden="true"></i>
+            <p class="font-bold text-slate-800 dark:text-white mb-1" data-ar="البريد الإلكتروني">Email</p>
+            <p dir="ltr" class="text-sm text-slate-500 dark:text-slate-400 break-all">mazen.alqayser@icloud.com</p>
+          </a>
+          <a href="https://wa.me/971553775669" target="_blank" rel="noopener" class="card p-6 block reveal">
+            <i class="fa-brands fa-whatsapp text-green-500 text-2xl mb-3" aria-hidden="true"></i>
+            <p class="font-bold text-slate-800 dark:text-white mb-1">WhatsApp</p>
+            <p dir="ltr" class="text-sm text-slate-500 dark:text-slate-400">+971 55 377 5669</p>
+          </a>
+          <a href="tel:+201124592083" class="card p-6 block reveal">
+            <i class="fa-solid fa-phone text-secondary text-2xl mb-3" aria-hidden="true"></i>
+            <p class="font-bold text-slate-800 dark:text-white mb-1" data-ar="الهاتف">Phone</p>
+            <p dir="ltr" class="text-sm text-slate-500 dark:text-slate-400">+20 112 459 2083</p>
+          </a>
+          <div class="card p-6 reveal">
+            <i class="fa-solid fa-briefcase text-amber-500 text-2xl mb-3" aria-hidden="true"></i>
+            <p class="font-bold text-slate-800 dark:text-white mb-1" data-ar="التوفر">Availability</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400" data-ar="عن بُعد · حول العالم">Remote · Worldwide</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-8 md:p-12 text-center shadow-xl reveal bg-gradient-to-br from-blue-600/10 to-purple-600/10">
+          <h3 class="font-display text-2xl md:text-4xl font-black text-slate-800 dark:text-white mb-3"
+              data-ar="لنبنِ شيئاً استثنائياً معاً">Let's build something exceptional together</h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto"
+             data-ar="من موقع شخصي إلى نظام مؤسسي كامل — أخبرني بفكرتك وسأحوّلها إلى منتج رقمي يليق باسمك.">
+            From a personal website to a full enterprise system — tell me your idea and I'll turn it into a digital product worthy of your name.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="mailto:mazen.alqayser@icloud.com" class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:-translate-y-1 transition-all">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-ar="أرسل بريداً">Send an Email</span>
             </a>
-        </nav>
-
-        <main class="md:ml-80 flex-grow p-6 md:p-12 lg:p-16 min-h-screen">
-            
-            <section id="about" class="mb-20 pt-10 reveal active">
-                <h1 class="text-5xl md:text-7xl font-black mb-2 font-tech text-slate-900 dark:text-white leading-tight">
-                    MAZEN <span class="text-gradient">ALQAYSER</span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl font-bold text-slate-600 dark:text-slate-400 mb-6 font-tech">
-                    IT Engineer <span class="text-primary mx-2">//</span> AI Developer
-                </h2>
-                
-                <div class="flex flex-wrap gap-4 mb-8 text-sm md:text-base">
-                    <div class="flex items-center px-4 py-2 rounded-lg bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700">
-                        <i class="fa-solid fa-envelope text-primary mr-3"></i>
-                        <span>mazen.alqayser@icloud.com</span>
-                    </div>
-                    <div class="flex items-center px-4 py-2 rounded-lg bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700">
-                        <i class="fa-solid fa-phone text-primary mr-3"></i>
-                        <span>+971553775669  - +201124592083</span>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 mb-10">
-                    <a href="https://www.facebook.com/mazealqayser/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-[#1877F2] hover:text-white transition-all duration-300 shadow-md">
-                        <i class="fa-brands fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-[#0A66C2] hover:text-white transition-all duration-300 shadow-md">
-                        <i class="fa-brands fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="https://github.com/mazen-alqayser" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-black hover:text-white transition-all duration-300 shadow-md">
-                        <i class="fa-brands fa-github text-xl"></i>
-                    </a>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl shadow-xl border-l-4 border-primary">
-                    <p class="text-lg leading-relaxed text-justify">
-<span class="font-bold text-primary">AI & Software Development Specialist</span> with extensive experience in <strong>end-to-end software engineering</strong>, <strong>cloud computing</strong>, and <strong>mobile app development</strong>. Proven track record in building <strong>intelligent chatbots</strong>, <strong>cross-platform applications</strong>, and <strong>enterprise systems</strong> that enhance collaboration, automate workflows, and drive innovation. <strong>Certified by IBM</strong> (AI & Full-Stack Development) and <strong>Meta</strong> (React Native Mobile Development), with deep knowledge in <strong>Generative AI</strong>, <strong>Machine Learning</strong>, and <strong>DevOps</strong> (Docker, Kubernetes, CI/CD, Cloud Security). Skilled in <strong>leading teams</strong>, delivering <strong>scalable solutions</strong>, and applying <strong>Agile</strong> and <strong>DevSecOps</strong> methodologies to ensure efficiency, reliability, and security. Experienced in collaborating with <strong>NGOs</strong> and <strong>international companies</strong> to develop impactful technology platforms that solve real-world challenges.                    </p>
-                </div>
-            </section>
-
-            <section id="education" class="mb-20 reveal">
-                <h2 class="text-3xl font-bold font-tech mb-8 heading-line text-slate-800 dark:text-white">Education</h2>
-                
-                <div class="grid gap-6">
-                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 hover:-translate-y-1">
-                        <div class="flex justify-between items-start flex-col md:flex-row">
-                            <div>
-                                <h3 class="text-xl font-bold text-primary">Bachelor of (Honours) in Information Technology</h3>
-                                <p class="text-slate-500 dark:text-slate-400 mt-1">Future University</p>
-                            </div>
-                            <div class="p-2 bg-blue-100 dark:bg-slate-700 rounded-lg mt-2 md:mt-0">
-                                <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 hover:-translate-y-1">
-                        <div>
-                            <h3 class="text-xl font-bold text-primary">Professional Certificate in Artificial Intelligence Developer</h3>
-                            <p class="text-slate-500 dark:text-slate-400 mt-1">IBM</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 hover:-translate-y-1">
-                        <div>
-                            <h3 class="text-xl font-bold text-primary">Full-Stack Software Developer Professional Certification</h3>
-                            <p class="text-slate-500 dark:text-slate-400 mt-1">IBM</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 hover:-translate-y-1">
-                        <div>
-                            <h3 class="text-xl font-bold text-primary">Meta React Native Mobile Developer Certification</h3>
-                            <p class="text-slate-500 dark:text-slate-400 mt-1">Meta</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="mb-20 reveal">
-                <h2 class="text-3xl font-bold font-tech mb-8 heading-line text-slate-800 dark:text-white">Technical Arsenal</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="glass-panel p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-code text-secondary mr-2"></i> Programming & Dev</h3>
-                        <div class="flex flex-wrap gap-4 text-3xl mb-4">
-                            <i class="devicon-python-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-javascript-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-html5-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-css3-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-php-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-nodejs-plain colored hover:scale-125 transition"></i>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400">Python, JavaScript, Node.js, PHP, HTML, CSS, SQL</p>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-xl border-t-2 border-primary">
-                        <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-brain text-primary mr-2"></i> AI & Intelligence</h3>
-                        <ul class="list-disc list-inside text-sm space-y-2 text-slate-600 dark:text-slate-400">
-                            <li><strong class="text-slate-800 dark:text-slate-200">Generative AI & LLMs</strong> (ChatGPT, OpenAI)</li>
-                            <li>Machine Learning, Deep Learning, NLP</li>
-                            <li>Predictive Analytics & Supervised Learning</li>
-                            <li>Prompt Engineering & AI Applications</li>
-                            <li>Creating a professional AI chatbot</li>
-                        </ul>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-globe text-green-500 mr-2"></i> Web Development</h3>
-                        <div class="flex flex-wrap gap-4 text-3xl mb-4">
-                            <i class="devicon-react-original colored hover:scale-125 transition"></i>
-                            <i class="devicon-django-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-flask-original colored hover:scale-125 transition"></i>
-                            <i class="devicon-wordpress-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-bootstrap-plain colored hover:scale-125 transition"></i>          
-                            <i class="devicon-restful-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-ui/ux-plain colored hover:scale-125 transition"></i>
-
-
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400">React.js, Redux, Django, Flask, WordPress, RESTful APIs, etc ..</p>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-cloud text-blue-400 mr-2"></i> Cloud & DevOps</h3>
-                        <div class="flex flex-wrap gap-4 text-3xl mb-4">
-                            <i class="devicon-docker-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-kubernetes-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-amazonwebservices-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-azure-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-linux-plain colored hover:scale-125 transition"></i>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400">Docker, K8s, AWS, Azure, CI/CD, DevSecOps</p>
-                    </div>
-                     <div class="glass-panel p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-mobile-alt text-purple-500 mr-2"></i> Mobile Development</h3>
-                        <div class="flex flex-wrap gap-4 text-3xl mb-4">
-                            <i class="devicon-react-original colored hover:scale-125 transition"></i>
-                            <i class="devicon-android-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-kotlin-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-swift-plain colored hover:scale-125 transition"></i>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400">React Native, Android, IOS, Cross-platform Apps</p>
-                    </div>
-                     <div class="glass-panel p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-database text-yellow-500 mr-2"></i> Database Management</h3>
-                        <div class="flex flex-wrap gap-4 text-3xl mb-4">
-                            <i class="devicon-mysql-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-postgresql-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-mongodb-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-firebase-plain colored hover:scale-125 transition"></i>
-                            <i class="devicon-ibmcloud-plain colored hover:scale-125 transition"></i>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400">SQL, NoSQL, Firebase, Supabase, Postgresql, SQlite, ORM</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="certificates" class="mb-20 reveal">
-                <h2 class="text-3xl font-bold font-tech mb-8 heading-line text-slate-800 dark:text-white">Certifications & Badges</h2>
-                
-                <div class="flex flex-wrap justify-center gap-8 mb-12">
-                     <a href="https://www.credly.com/badges/47809561-0931-433e-b094-cc29df7a7655" target="_blank" class="group flex flex-col items-center">
-                        <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-transform group-hover:scale-110">
-                            <img src="https://images.credly.com/size/680x680/images/70675aed-31be-4c30-add7-b99905a34005/image.png" class="w-16 h-16 object-contain" alt="IBM AI">
-                        </div>
-                        <span class="mt-2 text-xs font-bold font-tech text-primary">IBM AI Dev</span>
-                    </a>
-                    
-                    <a href="https://www.credly.com/badges/ffa6789f-1e20-465b-bd76-d41934653ad4" target="_blank" class="group flex flex-col items-center">
-                        <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.5)] transition-transform group-hover:scale-110">
-                            <img src="https://images.credly.com/size/680x680/images/e747147a-9300-4795-8b38-704a133bed88/Coursera_20Front_20end_20Development_20with_20React_20V2.png" class="w-16 h-16 object-contain" alt="React">
-                        </div>
-                        <span class="mt-2 text-xs font-bold font-tech text-orange-500">React Dev</span>
-                    </a>
-
-                    <a href="https://www.credly.com/badges/faddf893-03ee-4356-becd-72acd4efb98b" target="_blank" class="group flex flex-col items-center">
-                        <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-transform group-hover:scale-110">
-                            <img src="https://images.credly.com/size/680x680/images/17add978-0cea-40e8-8832-9492fc7c260b/Coursera_20Full_20Stack_20Software_20Developer_20Prof_20Cert_20V5.png" class="w-16 h-16 object-contain" alt="Full Stack">
-                        </div>
-                        <span class="mt-2 text-xs font-bold font-tech text-purple-500">IBM Full Stack</span>
-                    </a>
-                </div>
-
-                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-8 border-l-4 border-secondary">
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>
-                                <strong class="text-lg block text-slate-800 dark:text-white">IBM Full-Stack Developer</strong>
-                                <span class="text-sm text-slate-500">15 Certificates | IBM</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>
-                                <strong class="text-lg block text-slate-800 dark:text-white">IBM AI Developer</strong>
-                                <span class="text-sm text-slate-500">10 Certificates | IBM</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>
-                                <strong class="text-lg block text-slate-800 dark:text-white">React Native and Mobile Developer</strong>
-                                <span class="text-sm text-slate-500">Meta</span>
-                            </div>
-                        </li>
-                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>
-                                <strong class="text-lg block text-slate-800 dark:text-white">Supervisor Experience</strong>
-                                <span class="text-sm text-slate-500">Aldahab Company</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>
-                                <strong class="text-lg block text-slate-800 dark:text-white">Build a Mobile App with Google Sheets</strong>
-                                <span class="text-sm text-slate-500">Glide (No Coding)</span>
-                            </div>
-                        </li>
-                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>
-                                <strong class="text-lg block text-slate-800 dark:text-white">Defending Dignity & Digital Security</strong>
-                                <span class="text-sm text-slate-500">Amnesty International</span>
-                            </div>
-                        </li>
-                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>
-                                <strong class="text-lg block text-slate-800 dark:text-white">Software developer</strong>
-                                <span class="text-sm text-slate-500">IBM</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
- <div class="grid grid-cols-1 gap-10">
-  
-  <div class="group">
-    <h3 class="text-2xl font-bold mb-5 text-gray-800 dark:text-gray-100 flex items-center gap-2">
-      <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-      Networking & IT
-    </h3>
-    <div class="flex flex-wrap gap-2.5">
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors">Remote Access</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">CCNA (Beginner)</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">ICDL</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Network Administration</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">CLI</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Linux Commands</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">File Management</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Virtual Environment</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">OS & IDEs</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Documentation</span>
-    </div>
-  </div>
-
-  <div class="group">
-    <h3 class="text-2xl font-bold mb-5 text-gray-800 dark:text-gray-100 flex items-center gap-2">
-      <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-      Teamwork & Problem Solving
-    </h3>
-    <div class="flex flex-wrap gap-2.5">
-      <span class="px-3 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-lg text-sm font-bold border border-primary/30">Git</span>
-      <span class="px-3 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-lg text-sm font-bold border border-primary/30">GitHub</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">GitLab</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Bitbucket</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Version Control</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">WordPress</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Collaboration</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Creativity</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Critical Thinking</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Code Review</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Software Testing</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">QA</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Unit Testing</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Jest</span>
-    </div>
-  </div>
-
-  <div class="group">
-    <h3 class="text-2xl font-bold mb-5 text-gray-800 dark:text-gray-100 flex items-center gap-2">
-      <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-      Professional Skills
-    </h3>
-    <div class="flex flex-wrap gap-2.5">
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Communication</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Presentation</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Negotiation</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Agile Project Management</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Organizational Development</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Application Lifecycle Management</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Professional Networking (LinkedIn)</span>
-    </div>
-  </div>
-
-  <div class="group">
-    <h3 class="text-2xl font-bold mb-5 text-gray-800 dark:text-gray-100 flex items-center gap-2">
-      <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-      SDLC Models
-    </h3>
-    <div class="flex flex-wrap gap-2.5">
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Waterfall</span>
-      <span class="px-3 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-lg text-sm font-bold border border-primary/30">Agile</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">V-Model</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Iterative Model</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Spiral Model</span>
-      <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm border border-gray-200 dark:border-gray-700">Big Bang Model</span>
-      <span class="px-3 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-lg text-sm font-bold border border-primary/30">DevOps</span>
-    </div>
-  </div>
-
-</div>
-            </section>
-
-             <section id="organizations" class="mb-20 reveal">
-                <h2 class="text-3xl font-bold font-tech mb-8 heading-line text-slate-800 dark:text-white">Organizations</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border-t-4 border-red-500">
-                        <h3 class="text-xl font-bold mb-2">Terre des Hommes</h3>
-                        <p class="text-slate-600 dark:text-slate-400">Volunteer – ICDL Course Instructor</p>
-                    </div>
-                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border-t-4 border-blue-500">
-                        <h3 class="text-xl font-bold mb-2">Samarat</h3>
-                        <p class="text-slate-600 dark:text-slate-400">Volunteer</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="mb-20 reveal">
-                <h2 class="text-3xl font-bold font-tech mb-8 heading-line text-slate-800 dark:text-white">Featured Projects</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="h-3 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">AI Chatbot Assistant</h3>
-                            <p class="text-sm text-slate-500 mb-4">Terre des hommes Community Platform</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">AI</span>
-                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">Python</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="h-3 bg-gradient-to-r from-green-400 to-blue-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">VEES ERP System</h3>
-                            <p class="text-sm text-slate-500 mb-4">Full ERP System</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">Finance</span>
-                                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">Database</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="h-3 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Work Hub App</h3>
-                            <p class="text-sm text-slate-500 mb-4">Productivity Tool</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">Mobile</span>
-                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">React Native</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="h-3 bg-gradient-to-r from-green-400 to-blue-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">VEES LMS System</h3>
-                            <p class="text-sm text-slate-500 mb-4">Full LMS System</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">E-learning</span>
-                                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">Database</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:col-span-2 lg:col-span-3 bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
-                        <h4 class="font-bold mb-2">Other Notable Projects:</h4>
-                        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-600 dark:text-slate-400">
-                            <li><i class="fas fa-angle-right text-primary mr-2"></i> Social Media App (Own Project)</li>
-                            <li><i class="fas fa-angle-right text-primary mr-2"></i> Air-Ticket-Reservation System (University)</li>
-                            <li><i class="fas fa-angle-right text-primary mr-2"></i> Online Stores (E-commerce)</li>
-                            <li><i class="fas fa-angle-right text-primary mr-2"></i> +10 Other Projects</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="publications" class="mb-20 reveal">
-    <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-        <h2 class="text-3xl font-bold font-tech heading-line text-slate-800 dark:text-white">Featured Publications | المؤلفات والكتب</h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 dark:border-slate-700">
-            <div class="h-3 bg-gradient-to-r from-blue-600 to-emerald-500"></div>
-            <div class="p-8">
-                <div class="flex justify-between items-start mb-4">
-                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-bold rounded-full uppercase tracking-wider">Strategic Plan</span>
-                    <i class="fas fa-book-open text-blue-500 text-xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
-                    Strategic Plan to Save Sudan: Digital Transformation & Anti-Corruption via AI
-                </h3>
-                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                    A comprehensive roadmap leveraging artificial intelligence to rebuild national infrastructure, ensure transparency, and automate anti-corruption frameworks for a sustainable future.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded">Artificial Intelligence</span>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded">GovTech</span>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded">Digital Policy</span>
-                </div>
-                <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                    Read More <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                </a>
-            </div>
+            <a href="https://wa.me/971553775669" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 text-white font-bold shadow-lg shadow-green-500/30 hover:-translate-y-1 transition-all">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span data-ar="راسلني واتساب">Chat on WhatsApp</span>
+            </a>
+          </div>
         </div>
+      </section>
 
-        <div dir="rtl" class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 dark:border-slate-700">
-            <div class="h-3 bg-gradient-to-r from-emerald-500 to-blue-600"></div>
-            <div class="p-8">
-                <div class="flex justify-between items-start mb-4">
-                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 text-xs font-bold rounded-full uppercase tracking-wider">خطة استراتيجية</span>
-                    <i class="fas fa-book text-emerald-500 text-xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight font-arabic">
-                    الخطة الاستراتيجية لإنقاذ السودان: التحول الرقمي ومكافحة الفساد بالذكاء الاصطناعي
-                </h3>
-                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed font-arabic">
-                    رؤية استشرافية توظف تقنيات الذكاء الاصطناعي لإعادة بناء مؤسسات الدولة، تعزيز الشفافية، ووضع حلول تقنية جذرية لمكافحة الفساد المالي والإداري.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded">الذكاء الاصطناعي</span>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded">التحول الرقمي</span>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded">الحوكمة</span>
-                </div>
-                <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline font-arabic">
-                    اقرأ المزيد <i class="fas fa-arrow-left mr-2 text-sm"></i>
-                </a>
-            </div>
+      <!-- ═══════════ التذييل ═══════════ -->
+      <footer class="pt-10 pb-28 md:pb-10 border-t text-center" style="border-color: var(--line);">
+        <p class="font-display text-lg font-bold text-slate-800 dark:text-white mb-1">MAZEN <span class="text-gradient">ALQAYSER</span></p>
+        <p class="text-xs font-semibold text-primary tracking-widest uppercase mb-5" data-ar="مهندس تطوير برمجيات متكامل · مطور ذكاء اصطناعي">Full Stack Software Developer · AI Developer</p>
+        <div class="flex justify-center gap-3 mb-6">
+          <a href="https://www.facebook.com/mazealqayser/" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#1877F2] hover:text-white transition-all"><i class="fa-brands fa-facebook-f text-sm" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-9 h-9 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#0A66C2] hover:text-white transition-all"><i class="fa-brands fa-linkedin-in text-sm" aria-hidden="true"></i></a>
+          <a href="https://github.com/mazen-alqayser" target="_blank" rel="noopener" aria-label="GitHub" class="w-9 h-9 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-black hover:text-white transition-all"><i class="fa-brands fa-github text-sm" aria-hidden="true"></i></a>
+          <a href="https://wa.me/971553775669" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-9 h-9 grid place-items-center rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-[#25D366] hover:text-white transition-all"><i class="fa-brands fa-whatsapp text-sm" aria-hidden="true"></i></a>
         </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+          © <span id="year">2025</span> Mazen Alqayser — <span data-ar="جميع الحقوق محفوظة">All rights reserved</span>
+        </p>
+        <p class="text-xs text-slate-400 dark:text-slate-500 flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+          <span data-ar="صُمِّم وبُرْمِج يدوياً بعناية — بلا قوالب جاهزة.">Hand-coded with care — no templates, no page builders.</span>
+        </p>
+      </footer>
+    </main>
+  </div>
 
-        <div class="md:col-span-2 bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
-            <div class="flex items-center gap-4">
-                <div class="hidden sm:block p-4 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
-                    <i class="fas fa-lightbulb text-yellow-500 text-2xl"></i>
-                </div>
-              <div class="w-full">
-    <h4 class="font-bold mb-6 text-slate-800 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-3 flex items-center gap-2">
-        <i class="fas fa-target-shot text-primary"></i>
-        Key Objectives | الأهداف الرئيسية
-    </h4>
-
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-4">
-        
-        <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li class="flex items-start">
-                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                <span>Building a Unified National Data Center.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-microchip text-blue-500 mt-1 mr-3"></i>
-                <span>AI-Powered Audit Systems to track public funds.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
-                <span>Establishing the National Cyber Warfare Department.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-user-shield text-blue-500 mt-1 mr-3"></i>
-                <span>Enhancing National Security via AI analysis.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-gavel text-blue-500 mt-1 mr-3"></i>
-                <span>Automating Anti-Corruption frameworks.</span>
-            </li>
-        </ul>
-
-        <ul dir="rtl" class="space-y-3 text-sm text-slate-600 dark:text-slate-400 font-arabic">
-            <li class="flex items-start">
-                <i class="fas fa-check-circle text-emerald-500 mt-1 ml-3"></i>
-                <span>بناء مركز بيانات وطني موحد.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-microchip text-emerald-500 mt-1 ml-3"></i>
-                <span>أنظمة تدقيق ذكية لتتبع الأموال العامة.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-shield-alt text-emerald-500 mt-1 ml-3"></i>
-                <span>تأسيس دائرة الحرب الإلكترونية والأمن السيبراني.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-user-shield text-emerald-500 mt-1 ml-3"></i>
-                <span>تعزيز الأمن القومي عبر التحليل الاستباقي.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-gavel text-emerald-500 mt-1 ml-3"></i>
-                <span>أتمتة منظومة مكافحة الفساد في الدولة.</span>
-            </li>
-        </ul>
-        
-    </div>
-</div>
+  <!-- ═══════════ بوت واتساب المساعد ═══════════ -->
+  <div id="waDock" class="wa-dock">
+    <div id="waPanel" class="wa-panel" role="dialog" aria-label="WhatsApp chat">
+      <div class="wa-header">
+        <div class="wa-avatar"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+        <div class="wa-header-info">
+          <strong data-ar="مساعد مازن الرقمي">Mazen · Digital Assistant</strong>
+          <span class="wa-status"><span class="wa-status-dot" aria-hidden="true"></span><span data-ar="متصل الآن">Online</span></span>
         </div>
-    </div>
-</section>
-        </main>
+        <button id="waClose" class="wa-close" type="button" aria-label="Close chat"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </div>
+      <div id="waMessages" class="wa-messages" aria-live="polite"></div>
+      <div id="waChips" class="wa-chips"></div>
+      <div class="wa-footer">
+        <input id="waInput" type="text" autocomplete="off" data-ar-ph="اكتب رسالتك هنا…" placeholder="Type your message…">
+        <button id="waSend" class="wa-send" type="button">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          <span data-ar="إرسال">Send</span>
+        </button>
+      </div>
     </div>
 
-    <script>
-        // 1. Dark Mode Logic
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
+    <button id="waRobotBtn" class="robot-btn" type="button" aria-label="WhatsApp chat" aria-expanded="false">
+      <span class="robot" aria-hidden="true">
+        <span class="antenna"></span>
+        <span class="head"><span class="eye"></span><span class="eye"></span><span class="mouth"></span></span>
+      </span>
+      <span class="robot-wa" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
+      <span class="robot-tip" data-ar="تواصل عبر واتساب">Chat on WhatsApp</span>
+    </button>
+  </div>
 
-        // Check local storage or system preference
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            htmlElement.classList.add('dark');
+  <!-- زر العودة للأعلى -->
+  <button id="toTop" class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- الإشعارات -->
+  <div id="toastHost" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ═══════════ JavaScript ═══════════ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ══════════════════════════════════════════════════════════
+       1 · SITE CONFIG — هذا هو المكان الوحيد الذي تعدّل فيه
+       ══════════════════════════════════════════════════════════ */
+    var SITE = {
+      // رقم الواتساب بصيغة دولية بدون +
+      whatsappNumber: '971553775669',
+
+      // ★ روابط الكتب — الصق روابطك هنا لاحقاً | Paste your book links here
+      bookLinks: {
+        en: '',   // ← رابط النسخة الإنجليزية | English edition URL
+        ar: ''    // ← رابط النسخة العربية   | Arabic edition URL
+      },
+
+      // (اختياري) إذا أردت ملف PDF ثابتاً بدل المولّد الآلي، ضع رابطه هنا
+      cvPdfUrl: ''
+    };
+
+    /* ════════ 2 · Helpers ════════ */
+    var $  = function (s, c) { return (c || document).querySelector(s); };
+    var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+    var store = {
+      get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+      set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    };
+
+    var LANG = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ════════ 3 · Text dictionaries ════════ */
+    var META = {
+      en: {
+        title: 'Mazen Alqayser | Full Stack Software Developer & AI Developer',
+        desc: 'Portfolio of Mazen Alqayser — Full Stack Software Developer & AI Developer, certified by IBM & Meta. ERP/LMS systems, AI chatbots, mobile apps, cloud & DevOps. مازن القيصر — مطور برمجيات وذكاء اصطناعي.'
+      },
+      ar: {
+        title: 'مازن القيصر | مهندس تطوير برمجيات متكامل ومطور ذكاء اصطناعي',
+        desc: 'الموقع الرسمي لمازن القيصر — مهندس تطوير برمجيات متكامل ومطور ذكاء اصطناعي، معتمد من IBM وMeta. أنظمة ERP وLMS، روبوتات محادثة ذكية، تطبيقات موبايل، وحلول سحابية وDevOps.'
+      }
+    };
+
+    var ROLES = {
+      en: ['Full Stack Software Developer', 'AI Developer', 'Cloud & DevOps Engineer', 'Mobile App Developer', 'ERP & LMS Systems Builder'],
+      ar: ['مهندس تطوير برمجيات متكامل', 'مطور ذكاء اصطناعي', 'مهندس سحابة و DevOps', 'مطوّر تطبيقات موبايل', 'باني أنظمة ERP و LMS']
+    };
+
+    var TOASTS = {
+      en: {
+        bookSoon: 'The full book link is coming soon — stay tuned.',
+        popupBlocked: 'Pop-ups are blocked, so the Word version was downloaded instead.',
+        cvHint: 'Tip: choose "Save as PDF" in the print dialog — that is the ATS version.'
+      },
+      ar: {
+        bookSoon: 'رابط الكتاب الكامل سيُضاف قريباً — تابع التحديثات.',
+        popupBlocked: 'النوافذ المنبثقة محظورة، لذا تم تنزيل نسخة Word بدلاً منها.',
+        cvHint: 'نصيحة: اختر «حفظ كـ PDF» من نافذة الطباعة — هذه هي نسخة ATS.'
+      }
+    };
+
+    var WA = {
+      en: {
+        placeholder: 'Type your message…',
+        greeting: 'Hi there 👋 I am Mazen\u2019s digital assistant. How can I help you today?',
+        chips: ['General Inquiry', 'Request a Service', 'Project Collaboration'],
+        replies: {
+          'General Inquiry': 'Great — type your question below and I\u2019ll open a WhatsApp chat with Mazen right away.',
+          'Request a Service': 'Perfect — describe the service you need (website, app, system, AI chatbot…), then hit send.',
+          'Project Collaboration': 'Love it! Share a few details about the project, and let\u2019s take it from there.'
+        },
+        prefix: 'Hi Mazen 👋',
+        after: 'Opening WhatsApp… see you on the other side 🚀',
+        emptyToast: 'Please type a message or pick an option first.'
+      },
+      ar: {
+        placeholder: 'اكتب رسالتك هنا…',
+        greeting: 'أهلاً بك 👋 أنا المساعد الرقمي لمازن القيصر. كيف أستطيع مساعدتك اليوم؟',
+        chips: ['استفسار عام', 'طلب خدمة', 'تعاون في مشروع'],
+        replies: {
+          'استفسار عام': 'رائع — اكتب استفسارك في الحقل بالأسفل وسأفتح لك محادثة واتساب مع مازن مباشرة.',
+          'طلب خدمة': 'ممتاز — صف لي الخدمة التي تحتاجها (موقع، تطبيق، نظام، بوت ذكي…) ثم اضغط إرسال.',
+          'تعاون في مشروع': 'يسعدنا ذلك! اذكر تفاصيل المشروع، ونتابع الحديث عبر واتساب.'
+        },
+        prefix: 'مرحباً مازن 👋',
+        after: 'جارٍ فتح واتساب… نراك على الجهة الأخرى 🚀',
+        emptyToast: 'اكتب رسالتك أولاً أو اختر أحد الخيارات.'
+      }
+    };
+
+    /* ════════ 4 · Toast ════════ */
+    var toastHost = $('#toastHost');
+    var toastTimer = null;
+    function toast(msg) {
+      if (!toastHost) return;
+      toastHost.textContent = msg;
+      toastHost.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toastHost.classList.remove('show'); }, 3600);
+    }
+
+    /* ════════ 5 · Theme ════════ */
+    var themeBtn = $('#themeToggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function () {
+        var dark = document.documentElement.classList.contains('dark');
+        document.documentElement.classList.toggle('dark', !dark);
+        store.set('mz-theme', dark ? 'light' : 'dark');
+      });
+    }
+
+    /* ════════ 6 · Language engine ════════ */
+    var btnEN = $('#langEN'), btnAR = $('#langAR');
+    var metaDesc = $('meta[name="description"]');
+
+    function applyLanguage(lang, persist) {
+      LANG = lang;
+      var html = document.documentElement;
+      html.lang = lang;
+      html.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+      $$('[data-ar]').forEach(function (el) {
+        if (!el.dataset.en) el.dataset.en = el.innerHTML;
+        el.innerHTML = (lang === 'ar') ? el.dataset.ar : el.dataset.en;
+      });
+      $$('[data-ar-alt]').forEach(function (el) {
+        if (!el.dataset.enAlt) el.dataset.enAlt = el.getAttribute('alt') || '';
+        el.setAttribute('alt', (lang === 'ar') ? el.dataset.arAlt : el.dataset.enAlt);
+      });
+      $$('[data-ar-ph]').forEach(function (el) {
+        if (!el.dataset.enPh) el.dataset.enPh = el.getAttribute('placeholder') || '';
+        el.setAttribute('placeholder', (lang === 'ar') ? el.dataset.arPh : el.dataset.enPh);
+      });
+
+      document.title = META[lang].title;
+      if (metaDesc) metaDesc.setAttribute('content', META[lang].desc);
+
+      if (btnEN) btnEN.classList.toggle('lang-active', lang === 'en');
+      if (btnAR) btnAR.classList.toggle('lang-active', lang === 'ar');
+
+      if (persist) {
+        store.set('mz-lang', lang);
+        try {
+          var u = new URL(location.href);
+          u.searchParams.set('lang', lang);
+          history.replaceState(null, '', u);
+        } catch (e) { /* file:// أو قيود المتصفح — نتجاهل بهدوء */ }
+      }
+
+      startTyping();
+      renderChat();
+    }
+
+    if (btnEN) btnEN.addEventListener('click', function () { applyLanguage('en', true); });
+    if (btnAR) btnAR.addEventListener('click', function () { applyLanguage('ar', true); });
+
+    /* ════════ 7 · Typing effect ════════ */
+    var typedEl = $('#typed');
+    var typeTimer = null;
+    function startTyping() {
+      if (!typedEl) return;
+      clearTimeout(typeTimer);
+      var list = ROLES[LANG] || ROLES.en;
+      if (reduceMotion) { typedEl.textContent = list[0]; return; }
+      var i = 0, pos = 0, deleting = false;
+      var step = function () {
+        var word = list[i];
+        if (!deleting) {
+          pos++;
+          typedEl.textContent = word.slice(0, pos);
+          if (pos === word.length) { deleting = true; typeTimer = setTimeout(step, 1900); return; }
+          typeTimer = setTimeout(step, 65);
         } else {
-            htmlElement.classList.remove('dark');
+          pos--;
+          typedEl.textContent = word.slice(0, pos);
+          if (pos === 0) { deleting = false; i = (i + 1) % list.length; typeTimer = setTimeout(step, 380); return; }
+          typeTimer = setTimeout(step, 32);
         }
+      };
+      typedEl.textContent = '';
+      typeTimer = setTimeout(step, 300);
+    }
 
-        themeToggleBtn.addEventListener('click', () => {
-            htmlElement.classList.toggle('dark');
-            if (htmlElement.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+    /* ════════ 8 · Reveal + stagger + counters + nav spy ════════ */
+    $$('[data-stagger]').forEach(function (box) {
+      Array.prototype.forEach.call(box.children, function (child, i) {
+        child.style.setProperty('--d', Math.min(i * 70, 560) + 'ms');
+      });
+    });
+
+    function runCounter(el) {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      if (reduceMotion) { el.textContent = target; return; }
+      var t0 = performance.now(), dur = 1500;
+      var frame = function (t) {
+        var p = Math.min((t - t0) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            en.target.classList.add('active');
+            setTimeout(function () { en.target.style.removeProperty('--d'); }, 1600);
+            io.unobserve(en.target);
+          }
         });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      $$('.reveal').forEach(function (el) { io.observe(el); });
 
-        // 2. Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-
-        // 3. Robot/Assistant Behavior
-        const robotContainer = document.getElementById('robot-container');
-        setTimeout(() => {
-            robotContainer.classList.remove('translate-x-[200%]'); // Slide in
-        }, 1000);
-
-        let lastScrollY = window.scrollY;
-        window.addEventListener('scroll', () => {
-            // Hide robot when scrolling down, show when scrolling up
-            if (window.scrollY > lastScrollY) {
-                robotContainer.style.transform = 'translateX(200%)';
-            } else {
-                robotContainer.style.transform = 'translateX(0)';
-            }
-            lastScrollY = window.scrollY;
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { runCounter(en.target); cio.unobserve(en.target); }
         });
+      }, { threshold: 0.6 });
+      $$('.count').forEach(function (c) { cio.observe(c); });
 
-        // 4. Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            var id = '#' + en.target.id;
+            $$('.nav-link').forEach(function (a) {
+              a.classList.toggle('active', a.getAttribute('href') === id);
             });
+          }
         });
-    </script>
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      $$('main section[id]').forEach(function (s) { spy.observe(s); });
+    } else {
+      $$('.reveal').forEach(function (el) { el.classList.add('active'); });
+      $$('.count').forEach(runCounter);
+    }
+
+    /* ════════ 9 · Scroll: progress + back-to-top ════════ */
+    var progress = $('#progress'), toTop = $('#toTop');
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        if (progress) progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+        if (toTop) toTop.classList.toggle('show', h.scrollTop > 600);
+        ticking = false;
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    if (toTop) toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+    /* ════════ 10 · Book links (المؤلفات) ════════ */
+    $$('.book-link').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var url = (SITE.bookLinks[a.getAttribute('data-book')] || '').trim();
+        if (!url || url === '#') { toast(TOASTS[LANG].bookSoon); return; }
+        window.open(url, '_blank', 'noopener');
+      });
+    });
+
+    /* ════════ 11 · WhatsApp assistant ════════ */
+    var waPanel = $('#waPanel'), waRobot = $('#waRobotBtn'), waClose = $('#waClose'),
+        waMessages = $('#waMessages'), waChips = $('#waChips'), waInput = $('#waInput'), waSend = $('#waSend');
+    var waContext = null;
+
+    function scrollChat() { if (waMessages) waMessages.scrollTop = waMessages.scrollHeight; }
+    function addBubble(who, text) {
+      if (!waMessages) return;
+      var b = document.createElement('div');
+      b.className = 'wa-msg ' + who;
+      b.textContent = text;
+      waMessages.appendChild(b);
+      scrollChat();
+    }
+    function botSay(text, instant) {
+      if (instant) { addBubble('bot', text); return; }
+      var t = document.createElement('div');
+      t.className = 'wa-msg bot typing';
+      t.id = 'waTyping';
+      t.innerHTML = '<span></span><span></span><span></span>';
+      waMessages.appendChild(t);
+      scrollChat();
+      setTimeout(function () {
+        var old = $('#waTyping');
+        if (old) old.remove();
+        addBubble('bot', text);
+      }, 750);
+    }
+    function renderChat() {
+      if (!waMessages || !waChips) return;
+      var L = WA[LANG];
+      waContext = null;
+      waMessages.innerHTML = '';
+      waChips.innerHTML = '';
+      if (waInput) waInput.placeholder = L.placeholder;
+      L.chips.forEach(function (c) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'wa-chip';
+        b.textContent = c;
+        b.addEventListener('click', function () {
+          var LL = WA[LANG];
+          waContext = c;
+          addBubble('user', c);
+          botSay(LL.replies[c]);
+          if (waInput) waInput.focus();
+        });
+        waChips.appendChild(b);
+      });
+      botSay(L.greeting, true);
+    }
+    function togglePanel(open) {
+      if (!waPanel || !waRobot) return;
+      var willOpen = (typeof open === 'boolean') ? open : !waPanel.classList.contains('open');
+      waPanel.classList.toggle('open', willOpen);
+      waRobot.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      waRobot.classList.toggle('robot-on', willOpen);
+      if (willOpen) setTimeout(function () { if (waInput) waInput.focus(); }, 320);
+    }
+    if (waRobot) waRobot.addEventListener('click', function () { togglePanel(); });
+    if (waClose) waClose.addEventListener('click', function () { togglePanel(false); });
+    document.addEventListener('click', function (e) {
+      if (!waPanel || !waPanel.classList.contains('open')) return;
+      if (e.target.closest && e.target.closest('#waDock')) return;
+      togglePanel(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') togglePanel(false);
+    });
+    function sendWA() {
+      if (!waInput) return;
+      var L = WA[LANG];
+      var txt = waInput.value.trim();
+      if (!txt && !waContext) { toast(L.emptyToast); return; }
+      var lines = [L.prefix];
+      if (waContext) lines.push('— ' + waContext + ' —');
+      if (txt) lines.push(txt);
+      var url = 'https://wa.me/' + SITE.whatsappNumber + '?text=' + encodeURIComponent(lines.join('\n'));
+      var win = window.open(url, '_blank', 'noopener');
+      if (!win) location.href = url;
+      addBubble('user', txt || waContext);
+      waInput.value = '';
+      botSay(L.after);
+    }
+    if (waSend) waSend.addEventListener('click', sendWA);
+    if (waInput) waInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') sendWA(); });
+
+    /* ════════ 12 · ATS CV Generator — السيرة الذاتية ════════ */
+    var CV = {
+      en: {
+        ui: {
+          fileTitle: 'Mazen-Alqayser-CV-EN',
+          hint: 'For the ATS version, choose \u201CSave as PDF\u201D in the print dialog.',
+          pdf: 'Save as PDF',
+          word: 'Download Word (.doc)'
+        },
+        name: 'MAZEN MOHAMED SIDIG ALQAYSER',
+        role: 'Full Stack Software Developer  |  AI Developer',
+        contact: 'mazen.alqayser@icloud.com &nbsp;|&nbsp; <span dir="ltr">+971 55 377 5669</span> &middot; <span dir="ltr">+20 112 459 2083</span> &nbsp;|&nbsp; Portfolio: www.mazenalqayser.com &nbsp;|&nbsp; GitHub: github.com/mazen-alqayser &nbsp;|&nbsp; LinkedIn: Mazen Alqayser',
+        labels: { summary: 'Professional Summary', comp: 'Core Competencies', exp: 'Work Experience', edu: 'Education', skills: 'Technical Skills', cert: 'Certifications', proj: 'Selected Projects', pub: 'Publications', langs: 'Languages' },
+        summary: 'AI & Software Development Specialist with extensive experience in end-to-end software engineering, cloud computing, and mobile app development. Proven track record in building intelligent chatbots, cross-platform applications, and enterprise systems that enhance collaboration, automate workflows, and drive innovation. Certified by IBM (AI & Full-Stack Development) and Meta (React Native Mobile Development), with deep knowledge of Generative AI, Machine Learning, and DevOps (Docker, Kubernetes, CI/CD, Cloud Security). Skilled in leading teams, delivering scalable solutions, and applying Agile and DevSecOps methodologies. Experienced in collaborating with NGOs and international companies to develop impactful technology platforms.',
+        comp: 'Full-Stack Development (React.js &middot; Node.js &middot; Django &middot; Flask) &middot; Generative AI &amp; LLMs &middot; Machine Learning &amp; NLP &middot; Prompt Engineering &middot; Cloud &amp; DevOps (Docker &middot; Kubernetes &middot; AWS &middot; Azure &middot; CI/CD &middot; DevSecOps) &middot; Mobile Development (React Native) &middot; Database Design (SQL &middot; NoSQL &middot; Firebase &middot; Supabase) &middot; Agile &amp; Scrum &middot; Team Leadership',
+        exp: [
+          { t: 'Web Manager & Full-Stack Developer — Official Website of Dalia Al-Yas (Writer & Poet)', o: 'daliaalyas.com', b: [
+            'Managing, designing, and building the official website of the writer and poet Dalia Al-Yas.',
+            'Full ownership of content strategy, digital branding, development, and ongoing management.'
+          ]},
+          { t: 'Web Application Developer — Official Web App of Hamada Bashir (Star & Artist)', o: 'Entertainment / Media', b: [
+            'Developing the official web application for the star and artist Hamada Bashir.',
+            'Building an interactive, high-performance digital hub covering news, media, and fan engagement.'
+          ]},
+          { t: 'AI Chatbot Developer & Volunteer Instructor — Terre des Hommes (International NGO)', o: 'Community Platform', b: [
+            'Developed the AI-powered chatbot assistant for the organization\u2019s community platform.',
+            'Volunteered as an ICDL course instructor, training youth on essential digital skills.'
+          ]},
+          { t: 'Supervisor — Aldahab Company', o: 'Operations', b: [
+            'Supervised daily operations and coordinated team activities, strengthening leadership, planning, and problem-solving skills.'
+          ]},
+          { t: 'Independent Full-Stack & AI Developer — Freelance / Remote', o: 'Self-employed', b: [
+            'Delivered 15+ software products: ERP and LMS systems, e-commerce stores, mobile apps, and AI solutions.',
+            'Owned the full product lifecycle: requirements, architecture, development, deployment, and maintenance.'
+          ]}
+        ],
+        edu: [
+          { t: 'Bachelor of Information Technology (Honours)', o: 'Future University' },
+          { t: 'Professional Certificate in Artificial Intelligence Development', o: 'IBM' },
+          { t: 'Full-Stack Software Developer Professional Certification', o: 'IBM' },
+          { t: 'Meta React Native Mobile Developer Certification', o: 'Meta' }
+        ],
+        skills: [
+          ['Programming & Scripting', 'Python, JavaScript, Node.js, PHP, HTML, CSS, SQL'],
+          ['Artificial Intelligence', 'Generative AI & LLMs (ChatGPT, OpenAI), Machine Learning, Deep Learning, NLP, Predictive Analytics, Prompt Engineering, AI Chatbots'],
+          ['Web Development', 'React.js, Redux, Django, Flask, WordPress, RESTful APIs, Bootstrap'],
+          ['Cloud & DevOps', 'Docker, Kubernetes (K8s), AWS, Azure, CI/CD, DevSecOps, Linux'],
+          ['Mobile Development', 'React Native, Android, iOS, Cross-platform Apps'],
+          ['Databases', 'SQL, NoSQL, Firebase, Supabase, PostgreSQL, SQLite, ORM'],
+          ['Tools & Practices', 'Git, GitHub, GitLab, Bitbucket, Jest, Unit Testing, QA, Code Review, Networking (CCNA foundations, ICDL)']
+        ],
+        cert: [
+          'IBM Full-Stack Software Developer Professional Certificate — 15 sub-certificates (IBM / Credly)',
+          'IBM AI Developer Professional Certificate — 10 sub-certificates (IBM / Credly)',
+          'Meta React Native & Mobile Development (Meta / Credly)',
+          'Software Developer — IBM',
+          'Build a Mobile App with Google Sheets (No-Code) — Glide',
+          'Defending Dignity & Digital Security — Amnesty International',
+          'Networking Foundations: CCNA (Beginner), ICDL, Network Administration',
+          'Supervisor Experience — Aldahab Company'
+        ],
+        proj: [
+          'VEES ERP System — Complete enterprise resource planning system (finance and database modules).',
+          'VEES LMS — Complete learning management system for e-learning.',
+          'Work Hub App — Cross-platform productivity application (React Native).',
+          'AI Chatbot Assistant — Intelligent assistant for the Terre des Hommes community platform (Python).',
+          'Social Media App — Independent product (own project).',
+          'Air-Ticket Reservation System — University project.',
+          'Online Stores — E-commerce platforms. (+10 additional projects)'
+        ],
+        pub: [
+          'Strategic Plan to Save Sudan: Digital Transformation & Anti-Corruption via AI (English edition).',
+          'Al-Khutta Al-Istratijiyya li-Inqadh Al-Sudan: Digital Transformation & Anti-Corruption via AI (Arabic edition).'
+        ],
+        langs: 'Arabic — Native proficiency  |  English — Professional working proficiency'
+      },
+
+      ar: {
+        ui: {
+          fileTitle: 'Mazen-Alqayser-CV-AR',
+          hint: 'للحصول على نسخة ATS اختر «حفظ كـ PDF» من نافذة الطباعة.',
+          pdf: 'حفظ كـ PDF',
+          word: 'تنزيل Word ‏(.doc)'
+        },
+        name: 'مازن محمد صديق القيصر',
+        role: 'مهندس تطوير برمجيات متكامل  |  مطور ذكاء اصطناعي',
+        contact: 'البريد: mazen.alqayser@icloud.com &nbsp;|&nbsp; الهاتف: <span dir="ltr">+971 55 377 5669</span> &middot; <span dir="ltr">+20 112 459 2083</span> &nbsp;|&nbsp; الموقع: www.mazenalqayser.com &nbsp;|&nbsp; GitHub: github.com/mazen-alqayser',
+        labels: { summary: 'الملخص المهني', comp: 'الكفاءات الأساسية', exp: 'الخبرات العملية', edu: 'التعليم', skills: 'المهارات التقنية', cert: 'الشهادات والدورات', proj: 'مشاريع مختارة', pub: 'المؤلفات', langs: 'اللغات' },
+        summary: 'متخصص في هندسة البرمجيات والذكاء الاصطناعي، أمتلك خبرة واسعة في هندسة البرمجيات الشاملة من البداية للنهاية، والحوسبة السحابية، وتطوير تطبيقات الموبايل. سجلٌّ مهني مثبت في بناء روبوتات المحادثة الذكية، والتطبيقات متعددة المنصات، والأنظمة المؤسسية التي تُعزّز التعاون وتؤتمت سير العمل وتدفع الابتكار. حاصل على شهادات معتمدة من IBM (الذكاء الاصطناعي والتطوير المتكامل) وMeta (تطوير تطبيقات الموبايل بـ React Native)، مع معرفة عميقة بالذكاء الاصطناعي التوليدي وتعلّم الآلة وأدوات DevOps (Docker وKubernetes وCI/CD وأمن السحابة). أتقن قيادة الفرق وتقديم حلول قابلة للتوسّع وتطبيق منهجيات Agile وDevSecOps لضمان الكفاءة والموثوقية والأمان، مع خبرة في التعاون مع المنظمات غير الحكومية والشركات الدولية.',
+        comp: 'تطوير متكامل (React.js &middot; Node.js &middot; Django &middot; Flask) &middot; الذكاء الاصطناعي التوليدي والنماذج اللغوية &middot; تعلّم الآلة ومعالجة اللغات &middot; هندسة الأوامر &middot; السحابة وDevOps (Docker &middot; Kubernetes &middot; AWS &middot; Azure &middot; CI/CD &middot; DevSecOps) &middot; تطوير الموبايل (React Native) &middot; تصميم قواعد البيانات (SQL &middot; NoSQL &middot; Firebase &middot; Supabase) &middot; أجايل وسكرام &middot; قيادة الفرق',
+        exp: [
+          { t: 'إدارة وبناء الموقع الإلكتروني الرسمي — الكاتبة والشاعرة داليا الياس', o: 'موقع رسمي', b: [
+            'إدارة وتصميم وبناء الموقع الإلكتروني الرسمي للكاتبة والشاعرة داليا الياس.',
+            'المسؤولية الكاملة عن استراتيجية المحتوى والهوية الرقمية والتطوير والإدارة المستمرة.'
+          ]},
+          { t: 'مطوّر تطبيق ويب — التطبيق الرسمي للنجم والفنان حمادة بشير', o: 'ترفيه / إعلام', b: [
+            'تطوير تطبيق الويب الرسمي للنجم والفنان حمادة بشير.',
+            'بناء منصة رقمية تفاعلية عالية الأداء تجمع الأخبار والوسائط وتفاعل الجمهور.'
+          ]},
+          { t: 'مطوّر مساعد ذكي ومدرب متطوع — تير ديز هوم (منظمة دولية)', o: 'منصة مجتمعية', b: [
+            'تطوير مساعد المحادثة الذكي للمنصة المجتمعية الخاصة بالمنظمة.',
+            'التطوع كمدرب لشهادة ICDL لتدريب الشباب على المهارات الرقمية الأساسية.'
+          ]},
+          { t: 'مشرف — شركة الذهب (Aldahab Company)', o: 'العمليات', b: [
+            'الإشراف على العمليات اليومية وتنسيق أنشطة الفريق، ما رسّخ مهارات القيادة والتخطيط وحل المشكلات.'
+          ]},
+          { t: 'مطوّر مستقل — برمجيات متكاملة وذكاء اصطناعي (Freelance / عن بُعد)', o: 'عمل حر', b: [
+            'تسليم أكثر من 15 منتجاً برمجياً: أنظمة ERP وLMS، متاجر إلكترونية، تطبيقات موبايل، وحلول ذكاء اصطناعي.',
+            'إدارة دورة حياة المنتج كاملة: المتطلبات، المعمارية، التطوير، النشر، والصيانة.'
+          ]}
+        ],
+        edu: [
+          { t: 'بكالوريوس تقنية المعلومات (مع مرتبة الشرف)', o: 'جامعة المستقبل' },
+          { t: 'الشهادة المهنية في تطوير الذكاء الاصطناعي', o: 'IBM' },
+          { t: 'الشهادة المهنية في تطوير البرمجيات المتكاملة (Full-Stack)', o: 'IBM' },
+          { t: 'شهادة Meta في تطوير تطبيقات الموبايل (React Native)', o: 'Meta' }
+        ],
+        skills: [
+          ['البرمجة والتطوير', 'Python، JavaScript، Node.js، PHP، HTML، CSS، SQL'],
+          ['الذكاء الاصطناعي', 'الذكاء الاصطناعي التوليدي والنماذج اللغوية الكبيرة (ChatGPT، OpenAI)، تعلّم الآلة، التعلم العميق، معالجة اللغات الطبيعية، التحليلات التنبؤية، هندسة الأوامر، بناء روبوتات المحادثة'],
+          ['تطوير الويب', 'React.js، Redux، Django، Flask، WordPress، واجهات RESTful، Bootstrap'],
+          ['السحابة و DevOps', 'Docker، Kubernetes، AWS، Azure، CI/CD، DevSecOps، Linux'],
+          ['تطوير الموبايل', 'React Native، أندرويد، iOS، التطبيقات متعددة المنصات'],
+          ['قواعد البيانات', 'SQL، NoSQL، Firebase، Supabase، PostgreSQL، SQLite، ORM'],
+          ['الأدوات والممارسات', 'Git، GitHub، GitLab، Bitbucket، Jest، اختبارات الوحدة، ضمان الجودة، مراجعة الكود، الشبكات (أساسيات CCNA، ICDL)']
+        ],
+        cert: [
+          'الشهادة المهنية لمطوّر البرمجيات المتكاملة من IBM — 15 شهادة فرعية (IBM / Credly)',
+          'الشهادة المهنية لمطوّر الذكاء الاصطناعي من IBM — 10 شهادات فرعية (IBM / Credly)',
+          'مطوّر React Native وتطبيقات الموبايل — Meta / Credly',
+          'مطوّر برمجيات — IBM',
+          'بناء تطبيق موبايل عبر Google Sheets (بدون برمجة) — Glide',
+          'الدفاع عن الكرامة والأمن الرقمي — منظمة العفو الدولية',
+          'أساسيات الشبكات: CCNA (مبتدئ)، ICDL، إدارة الشبكات',
+          'خبرة إشرافية — شركة الذهب (Aldahab Company)'
+        ],
+        proj: [
+          'نظام VEES لإدارة الموارد (ERP) — نظام متكامل يشمل وحدات المالية وقواعد البيانات.',
+          'نظام VEES للتعلم الإلكتروني (LMS) — نظام إدارة تعلّم متكامل.',
+          'تطبيق Work Hub — تطبيق إنتاجية متعدد المنصات (React Native).',
+          'مساعد المحادثة الذكي — مساعد ذكي لمنصة تير ديز هوم المجتمعية (Python).',
+          'تطبيق شبكات اجتماعية — مشروع خاص مستقل.',
+          'نظام حجز تذاكر الطيران — مشروع جامعي.',
+          'متاجر إلكترونية — منصات تجارة إلكترونية. (+10 مشاريع إضافية)'
+        ],
+        pub: [
+          'Strategic Plan to Save Sudan: Digital Transformation & Anti-Corruption via AI — النسخة الإنجليزية.',
+          'الخطة الاستراتيجية لإنقاذ السودان: التحول الرقمي ومكافحة الفساد بالذكاء الاصطناعي — النسخة العربية.'
+        ],
+        langs: 'العربية — اللغة الأم  |  الإنجليزية — مستوى مهني'
+      }
+    };
+
+    var CV_CSS = '' +
+      '@page{size:A4;margin:12mm}' +
+      '*{box-sizing:border-box}' +
+      'body{font-family:Arial,"Segoe UI",Tahoma,sans-serif;color:#111;font-size:10.5pt;line-height:1.5;margin:0;background:#fff}' +
+      '.cv{padding:4mm 1mm}' +
+      'h1{font-size:18.5pt;margin:0;letter-spacing:.5pt;text-align:center}' +
+      '.role{font-size:11.5pt;font-weight:700;text-align:center;margin:3pt 0 3pt;color:#222}' +
+      '.contact{font-size:8.8pt;text-align:center;margin:0 0 3pt;color:#333}' +
+      'h2{font-size:11pt;text-transform:uppercase;letter-spacing:.6pt;border-bottom:1.2pt solid #111;padding-bottom:2pt;margin:11pt 0 5pt}' +
+      'p{margin:0 0 4pt}' +
+      'ul{margin:2pt 0 6pt;padding-inline-start:16pt}' +
+      'li{margin:0 0 2.5pt}' +
+      '.job{margin:0 0 7pt}' +
+      '.jt{margin:0;font-weight:700;font-size:10.8pt}' +
+      '.jo{margin:0 0 2pt;font-style:italic;font-size:10pt;color:#333}' +
+      '.edu{margin:0 0 3pt}' +
+      '.toolbar{background:#0f172a;color:#fff;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-family:Arial,sans-serif;font-size:12px}' +
+      '.tb-name{font-weight:bold;letter-spacing:1px;margin-inline-end:auto}' +
+      '.tb-hint{opacity:.75;font-size:11px}' +
+      '.toolbar button{border:none;cursor:pointer;padding:7px 14px;border-radius:8px;font-weight:bold;font-size:12px;font-family:inherit}' +
+      '#cvPrint{background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#fff}' +
+      '#cvWord{background:#22c55e;color:#fff}' +
+      '@media print{.toolbar{display:none}}';
+
+    function esc(s) { return String(s); }
+
+    function buildCVBody(lang) {
+      var t = CV[lang];
+      var s = '';
+      s += '<h1>' + t.name + '</h1>';
+      s += '<p class="role">' + t.role + '</p>';
+      s += '<p class="contact">' + t.contact + '</p>';
+      s += '<h2>' + t.labels.summary + '</h2><p>' + t.summary + '</p>';
+      s += '<h2>' + t.labels.comp + '</h2><p>' + t.comp + '</p>';
+      s += '<h2>' + t.labels.exp + '</h2>';
+      t.exp.forEach(function (j) {
+        s += '<div class="job"><p class="jt">' + j.t + '</p><p class="jo">' + j.o + '</p><ul>';
+        j.b.forEach(function (li) { s += '<li>' + li + '</li>'; });
+        s += '</ul></div>';
+      });
+      s += '<h2>' + t.labels.edu + '</h2>';
+      t.edu.forEach(function (e) { s += '<p class="edu"><b>' + e.t + '</b>' + (e.o ? ' — ' + e.o : '') + '</p>'; });
+      s += '<h2>' + t.labels.skills + '</h2>';
+      t.skills.forEach(function (g) { s += '<p><b>' + g[0] + ':</b> ' + g[1] + '</p>'; });
+      s += '<h2>' + t.labels.cert + '</h2><ul>' + t.cert.map(function (c) { return '<li>' + c + '</li>'; }).join('') + '</ul>';
+      s += '<h2>' + t.labels.proj + '</h2><ul>' + t.proj.map(function (c) { return '<li>' + c + '</li>'; }).join('') + '</ul>';
+      s += '<h2>' + t.labels.pub + '</h2><ul>' + t.pub.map(function (c) { return '<li>' + c + '</li>'; }).join('') + '</ul>';
+      s += '<h2>' + t.labels.langs + '</h2><p>' + t.langs + '</p>';
+      return esc(s);
+    }
+
+    function buildCVDoc(lang) {
+      var ui = CV[lang].ui;
+      return '<!DOCTYPE html><html lang="' + lang + '" dir="' + (lang === 'ar' ? 'rtl' : 'ltr') + '">' +
+        '<head><meta charset="utf-8"><title>' + ui.fileTitle + '</title><style>' + CV_CSS + '</style></head><body>' +
+        '<div class="toolbar"><span class="tb-name">MAZEN ALQAYSER — CV (ATS)</span>' +
+        '<span class="tb-hint">' + ui.hint + '</span>' +
+        '<button id="cvPrint" type="button">' + ui.pdf + '</button>' +
+        '<button id="cvWord" type="button">' + ui.word + '</button></div>' +
+        '<div class="cv">' + buildCVBody(lang) + '</div></body></html>';
+    }
+
+    function downloadWordCV(lang) {
+      var body = buildCVBody(lang);
+      var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">' +
+        '<head><meta charset="utf-8"><title>CV</title></head>' +
+        '<body dir="' + (lang === 'ar' ? 'rtl' : 'ltr') + '" style="font-family:Arial,sans-serif">' + body + '</body></html>';
+      var blob = new Blob(['\ufeff' + html], { type: 'application/msword;charset=utf-8' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'Mazen-Alqayser-CV-' + lang.toUpperCase() + '.doc';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 800);
+    }
+
+    function openCV() {
+      if (SITE.cvPdfUrl) {
+        var dl = document.createElement('a');
+        dl.href = SITE.cvPdfUrl;
+        dl.setAttribute('download', '');
+        document.body.appendChild(dl);
+        dl.click();
+        dl.remove();
+        return;
+      }
+      var w = window.open('', '_blank');
+      if (!w) { downloadWordCV(LANG); toast(TOASTS[LANG].popupBlocked); return; }
+      w.document.open();
+      w.document.write(buildCVDoc(LANG));
+      w.document.close();
+      if (w.focus) w.focus();
+      var p = w.document.getElementById('cvPrint');
+      var d = w.document.getElementById('cvWord');
+      if (p) p.addEventListener('click', function () { w.print(); });
+      if (d) d.addEventListener('click', function () { downloadWordCV(LANG); });
+      toast(TOASTS[LANG].cvHint);
+      setTimeout(function () { try { w.print(); } catch (e) {} }, 1200);
+    }
+
+    $$('.cv-btn').forEach(function (b) { b.addEventListener('click', openCV); });
+
+    /* ════════ 13 · RTL icon flipping ════════ */
+    function syncRtlIcons() {
+      var rtl = document.documentElement.dir === 'rtl';
+      $$('.rtl-flip').forEach(function (i) { i.style.transform = rtl ? 'scaleX(-1)' : ''; });
+    }
+    var syncRtlIconsTimer = null;
+    document.addEventListener('DOMContentLoaded', syncRtlIcons);
+    // نستدعيها أيضاً بعد كل تبديل لغة عبر مراقب بسيط:
+    var dirObserver = new MutationObserver(function () {
+      clearTimeout(syncRtlIconsTimer);
+      syncRtlIconsTimer = setTimeout(syncRtlIcons, 30);
+    });
+    dirObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+
+    /* ════════ 14 · Init ════════ */
+    applyLanguage(LANG, false);
+    syncRtlIcons();
+
+    var yearEl = $('#year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* توقيع المطور في وحدة التحكم — لمَن يعرف أين ينظر */
+    try {
+      console.log('%cMAZEN ALQAYSER', 'font:900 22px Orbitron,Arial;color:#3b82f6;letter-spacing:2px');
+      console.log('%cFull Stack Software Developer · AI Developer\nCurious about the source? Good — it was hand-written, line by line.\n→ github.com/mazen-alqayser', 'color:#8b5cf6;font-size:12px');
+    } catch (e) {}
+  })();
+  </script>
 </body>
+
 </html>
-
-
